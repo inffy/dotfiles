@@ -107,10 +107,6 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias nano="micro"
-alias update-grub="sudo grub2-mkconfig -o /etc/grub2-efi.cfg"
-alias get-kernel="sudo rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:xxmitsu:kernel-fedora kernel kernel-core kernel-modules kernel-modules-extra"
-alias ostree-pin="sudo ostree admin pin"
-alias ostree-status="rpm-ostree status"
-alias upd="rpm-ostree update"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
