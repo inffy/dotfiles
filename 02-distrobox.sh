@@ -21,6 +21,6 @@ echo "Creating shortcuts for the Fedora distrobox"
 ./distrobox/distrobox-terminal-profile.sh -n fedora-tb -c fedora-tb -s "<Primary><Alt>f"
 
 echo "Creating shortcuts for Arch distrobox"
-./bits/distrobox-terminal-profile.sh -n alpine-tb -c alpine-tb -s "<Primary><Alt>a"
+./distrobox/distrobox-terminal-profile.sh -n alpine-tb -c alpine-tb -s "<Primary><Alt>a"
 
 echo "Done!"
