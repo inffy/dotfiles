@@ -38,7 +38,7 @@ cd ~/Projects/dotfiles
 mkdir -p ~/.local/share/fonts
 curl -sfLo "$HOME/.local/share/fonts/Ubuntu Mono Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/UbuntuMono/Regular/complete/Ubuntu%20Mono%20Nerd%20Font%20Complete.ttf
 curl -sfLo "$HOME/.local/share/fonts/Ubuntu Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Ubuntu/Regular/complete/Ubuntu%20Nerd%20Font%20Complete.ttf
-cp -R fonts/ubuntu-font-family/*.ttf $HOME/.local/share/fonts/
+cp -R fonts/ubuntu/*.ttf $HOME/.local/share/fonts/
 cp -R fonts/meslo/*.ttf $HOME/.local/share/fonts/
 # Flush font cache
 fc-cache
