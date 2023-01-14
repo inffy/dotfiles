@@ -31,7 +31,7 @@ echo "change shell to zsh"
 sudo usermod -s /bin/zsh juha
 
 echo "Install needed fonts"
-cd ~/Projects/dotfiles
+cd ~/Projects/fonts
 # Fonts
 #
 # NerdFonts are basically fonts with a more rich set of emojis embeded
