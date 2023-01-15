@@ -110,7 +110,7 @@ alias nano="micro"
 alias sudo="sudo "
 alias upd="rpm-ostree update"
 alias pin="sudo ostree admin pin"
-alias unpin"sudo ostree admin pin --unpin"
+alias unpin="sudo ostree admin pin --unpin"
 alias status="rpm-ostree status"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
