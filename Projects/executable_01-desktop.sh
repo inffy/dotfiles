@@ -15,23 +15,11 @@ cd nord-gnome-terminal/src
 echo "Installing to default profile"
 ./nord.sh -p default
 
-echo "Switch using ZSH instead of bash"
-cd ~/Projects/dotfiles
-
-echo "Copy oh-my-zsh confs to home"
-cp -r .oh-my-zsh ~/
-
-cd zsh
-
-echo "Copy zsh and p10k configs to home"
-cp .zshrc ~/
-cp .p10k.zsh ~/
-
 echo "change shell to zsh"
 sudo usermod -s /bin/zsh juha
 
 echo "Install needed fonts"
-cd ~/Projects/fonts
+
 # Fonts
 #
 # NerdFonts are basically fonts with a more rich set of emojis embeded
