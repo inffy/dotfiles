@@ -31,4 +31,4 @@ cp -R fonts/meslo/*.ttf $HOME/.local/share/fonts/
 # Flush font cache
 fc-cache
 
-echo "Done, please reboot!"
+echo "Done!"
