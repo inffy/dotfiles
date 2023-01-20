@@ -31,10 +31,4 @@ cp -R fonts/meslo/*.ttf $HOME/.local/share/fonts/
 # Flush font cache
 fc-cache
 
-# Get current profile for terminal, and update the font
-current_profile=$(dconf list /org/gnome/terminal/legacy/profiles:/ | head -n1)
-# TODO(mc): We /could/ prompt the user if they want to keep the current font, use Ubuntu Mono, or Ubuntu Mono Nerd Font?
-dconf write /org/gnome/terminal/legacy/profiles:/${current_profile}use-system-font false
-dconf write /org/gnome/terminal/legacy/profiles:/${current_profile}font "'MesloLGS NF 10'"
-
 echo "Done, please reboot!"
