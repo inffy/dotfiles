@@ -1,0 +1,69 @@
+default:
+  @just --list
+
+bios:
+  systemctl reboot --firmware-setup
+
+distrobox-arch:
+  echo 'Creating Arch distrobox ...'
+  distrobox create --image docker.io/library/archlinux:latest -n arch -Y
+
+distrobox-fedora:
+  echo 'Creating Fedora distrobox ...'
+  distrobox create --image quay.io/fedora/fedora:37 -n fedora -Y
+ 
+distrobox-ubuntu:
+  echo 'Creating Ubuntu distrobox ...'
+  distrobox create --image quay.io/toolbx-images/ubuntu-toolbox:22.04 -n ubuntu -Y
+  
+setup-flatpaks:
+  echo 'Setting up your flatpaks...'
+  flatpak install -y --user \\
+  com.discordapp.Discord \\
+  sh.cider.Cider \\
+  com.microsoft.Edge \\
+  com.slack.Slack \\
+  com.visualstudio.code \\
+  im.riot.Riot \\
+  tv.plex.PlexDesktop \\
+  com.nextcloud.desktopclient.nextcloud \\
+  org.telegram.desktop \\
+  com.raggesilver.BlackBox \\
+  io.github.mimbrero.WhatsAppDesktop \\
+  org.filezillaproject.Filezilla \\
+  org.gimp.GIMP \\
+  io.gitlab.adhami3310.Converter
+  
+  
+setup-pwa:
+  echo 'Giving browser permission to create PWAs (Progressive Web Apps)'
+  # Add for your favorite chromium-based browser
+  flatpak override --user --filesystem=~/.local/share/applications --filesystem=~/.local/share/icons com.microsoft.Edge
+
+setup-gaming:
+  echo 'Setting up gaming experience ... lock and load.'
+  flatpak install -y --user \\
+  com.discordapp.Discord \\
+  com.feaneron.Boatswain \\
+  org.freedesktop.Platform.VulkanLayer.MangoHud//22.08 \\
+  org.freedesktop.Platform.VulkanLayer.OBSVkCapture//22.08 \\
+  org.freedesktop.Platform.VulkanLayer.vkBasalt//22.08 \\
+  com.heroicgameslauncher.hgl \\
+  com.obsproject.Studio \\
+  com.obsproject.Studio.Plugin.OBSVkCapture \\
+  com.obsproject.Studio.Plugin.Gstreamer \\
+  com.usebottles.bottles \\
+  com.valvesoftware.Steam \\
+  com.valvesoftware.Steam.Utility.gamescope \\
+  net.davidotek.pupgui2
+  flatpak override com.usebottles.bottles --user --filesystem=xdg-data/applications 
+  flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam 
+  flatpak override --user --env=MANGOHUD=1 com.heroicgameslauncher.hgl 
+
+init-chezmoi:
+	chezmoi init --apply inffy 
+
+update:
+  rpm-ostree update
+  flatpak update -y
+  distrobox upgrade -a
