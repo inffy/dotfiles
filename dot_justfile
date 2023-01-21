@@ -14,7 +14,7 @@ distrobox-fedora:
  
 distrobox-ubuntu:
   echo 'Creating Ubuntu distrobox ...'
-  distrobox create --image quay.io/toolbx-images/ubuntu-toolbox:22.04 -n ubuntu -Y
+  distrobox create --image quay.io/toolbx-images/ubuntu-toolbox:22.04 -n ubuntu --pre-init-hooks "sudo apt install -y just"
   
 setup-flatpaks:
   echo 'Setting up your flatpaks...'
