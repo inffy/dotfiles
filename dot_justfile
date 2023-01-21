@@ -6,11 +6,11 @@ bios:
 
 distrobox-arch:
   echo 'Creating Arch distrobox ...'
-  distrobox create --image docker.io/library/archlinux:latest -n arch -Y
+  distrobox create --image docker.io/library/archlinux:latest -n arch --pre-init-hooks "sudo pacman -Syu --noconfirm just"
 
 distrobox-fedora:
   echo 'Creating Fedora distrobox ...'
-  distrobox create --image quay.io/fedora/fedora:37 -n fedora -Y
+  distrobox create --image quay.io/fedora/fedora:37 -n fedora --pre-init-hooks "sudo dnf install -y just"
  
 distrobox-ubuntu:
   echo 'Creating Ubuntu distrobox ...'
@@ -33,13 +33,8 @@ setup-flatpaks:
   org.filezillaproject.Filezilla \\
   org.gimp.GIMP \\
   io.gitlab.adhami3310.Converter
+  flatpak override --user --filesystem=~/.local/share/applications --filesystem=~/.local/share/icons com.microsoft.Edge  
   
-  
-setup-pwa:
-  echo 'Giving browser permission to create PWAs (Progressive Web Apps)'
-  # Add for your favorite chromium-based browser
-  flatpak override --user --filesystem=~/.local/share/applications --filesystem=~/.local/share/icons com.microsoft.Edge
-
 setup-gaming:
   echo 'Setting up gaming experience ... lock and load.'
   flatpak install -y --user \\
