@@ -25,10 +25,10 @@
             "type": "title",
             "format": "{host-name}"
         },
-        {
-            "key": "│ {#33}󰅐 uptime  {#keys}│",
-            "type": "uptime"
-        },
+       // {
+       //     "key": "│ {#33}󰅐 uptime  {#keys}│",
+       //     "type": "uptime"
+       // },
         {
             "key": "│ {#34}{icon} distro  {#keys}│",
             "type": "os"
@@ -68,11 +68,11 @@
             "key": "│ {#35} RAM     {#keys}│",
             "type": "memory"
         },
-        {
-            "key": "│ {#36}󰩟 network {#keys}│",
-            "type": "localip",
-            "format": "{ipv4} ({ifname})"
-        },
+       // {
+       //     "key": "│ {#36}󰩟 network {#keys}│",
+       //     "type": "localip",
+       //     "format": "{ipv4} ({ifname})"
+       // },
         {
             "key": "├───────────┤",
             "type": "custom"
