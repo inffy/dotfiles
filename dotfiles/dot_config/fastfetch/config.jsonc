@@ -49,16 +49,16 @@
             "key": "│ {#32} shell   {#keys}│",
             "type": "shell"
         },
-       // {
-       //     "key": "│ {#33}󰍛 cpu     {#keys}│",
-       //     "type": "cpu",
-       //     "showPeCoreCount": true
-       // },
         {
-            "key": "│ {#33}󰍛 gpu     {#keys}│",
-            "type": "gpu",
+            "key": "│ {#33}󰍛 cpu     {#keys}│",
+            "type": "cpu",
+            "showPeCoreCount": true
+        },
+       // {
+       //     "key": "│ {#33}󰍛 gpu     {#keys}│",
+       //     "type": "gpu",
         //  "keyColor": "green"
-                },
+       //         },
         {
             "key": "│ {#34}󰉉 disk    {#keys}│",
             "type": "disk",
