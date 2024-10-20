@@ -49,11 +49,11 @@
             "key": "│ {#32} shell   {#keys}│",
             "type": "shell"
         },
-        {
-            "key": "│ {#33}󰍛 cpu     {#keys}│",
-            "type": "cpu",
-            "showPeCoreCount": true
-        },
+       // {
+       //     "key": "│ {#33}󰍛 cpu     {#keys}│",
+       //     "type": "cpu",
+       //     "showPeCoreCount": true
+       // },
         {
             "key": "│ {#33}󰍛 gpu     {#keys}│",
             "type": "gpu",
