@@ -2,7 +2,8 @@
 
 
 
-![2024-10-31-174444_hyprshot](https://github.com/user-attachments/assets/c91015c6-8893-4776-8150-bb4616dc02cc)
+![2024-11-12-182406_hyprshot](https://github.com/user-attachments/assets/9e07ba18-e818-4851-a33b-128906b4fadc)
+
 
 
 
