@@ -21,7 +21,7 @@ window {
     width: 600px;
     border: 2px;
     border-color: @blue;
-    background-color: @transparent;
+    background-color: @bg-col;
     border-radius:    10px;
 }
 

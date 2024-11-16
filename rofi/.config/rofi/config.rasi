@@ -18,10 +18,4 @@ configuration{
     height: 1000px;
 }
 
-listview {
-	lines: 4;
-	columns: 1;
-}
-
-
 @theme "catppuccin-mocha"
