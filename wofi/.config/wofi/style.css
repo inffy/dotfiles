@@ -53,7 +53,7 @@
 
 * {
   font-family: 'JetBrains Mono Nerd', monospace;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /* Window */
@@ -68,7 +68,7 @@ window {
 /* Inner Box */
 #inner-box {
   margin: 5px;
-  padding: 10px;
+  padding: 8x;
   border: none;
   background-color: @base;
 }
