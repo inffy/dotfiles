@@ -17,11 +17,11 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    height: 500px;
-    width: 800px;
-    border: 3px;
+    height: 400px;
+    width: 600px;
+    border: 2px;
     border-color: @blue;
-    background-color: @bg-col;
+    background-color: @transparent;
     border-radius:    10px;
 }
 
@@ -60,9 +60,10 @@ listview {
     border: 0px 0px 0px;
     padding: 6px 0px 0px;
     margin: 10px 0px 0px 20px;
-    columns: 2;
-    lines: 5;
+    columns: 1;
+    lines: 8;
     background-color: @bg-col;
+    dynamic: true;
 }
 
 element {
