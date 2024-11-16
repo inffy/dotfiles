@@ -30,8 +30,8 @@ button {
 
 button:hover {
     background: inherit;
-    color: @blue;
-    border-top: 2px solid @blue;
+    color: @sky;
+    border-top: 2px solid @sky;
 }
 
 #workspaces button {
@@ -40,14 +40,14 @@ button:hover {
 
 #workspaces button.focused {
     background-color: rgba(0, 0, 0, 0.3);
-    color: @sky;
-    border-top: 2px solid @sky;
+    color: @blue;
+    border-top: 2px solid @blue;
 }
 
 #workspaces button.active {
     background-color: rgba(0, 0, 0, 0.3);
-    color: @sky;
-    border-top: 2px solid @sky;
+    color: @blue;
+    border-top: 2px solid @blue;
 }
 
 #workspaces button.urgent {
