@@ -120,6 +120,12 @@ button:hover {
     border-bottom: 2px solid @sky;
 }
 
+#custom-updates {
+	margin-right: 10px;
+	color: @mauve;
+	border-bottom: 2px solid @mauve;	
+}
+
 /* -----------------------------------------------------
  * Tray
  * ----------------------------------------------------- */
