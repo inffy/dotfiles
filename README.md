@@ -1,4 +1,4 @@
-# Hyprland dotfiles
+# My dotfiles
 
 
 
@@ -7,7 +7,7 @@
 
 
 
-These are my somewhat non-complete dotfiles for my Hyprland install. The base config is based on [Typecraft-devs](https://github.com/typecraft-dev/dotfiles) dotfiles
+These are my somewhat non-complete dotfiles for my (mostly) Hyprland install. The base config is based on [Typecraft-devs](https://github.com/typecraft-dev/dotfiles) dotfiles
 which I have then modified somewhat.
 
 
