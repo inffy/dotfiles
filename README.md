@@ -13,7 +13,7 @@ which I have then modified somewhat.
 
 ### Needed apps and dependencies
 
-You will need atleast these apps/packages:
+_The following list is very opionated!!! Propably has some un-needed packages or bloat, so you should take this with a grain of salt so to speak._
 
 - xdg-desktop-portal-gtk
 - xdg-desktop-portal-hyprland
