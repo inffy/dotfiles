@@ -32,6 +32,8 @@ test -f /usr/share/ublue-os/bluefin-cli/bling.sh && source /usr/share/ublue-os/b
 # re-enable atuin ctrl+r
 bind -x '"\C-r": __atuin_history'
 
-eval "$(fzf --bash)"
+#eval "$(fzf --bash)"
 
 source ~/.bash_aliases
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
