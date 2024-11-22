@@ -1,8 +1,8 @@
 * {
-    bg-col:  #1e1e2e;
-    bg-col-light: #1e1e2e;
+    bg-col:  #1e1e2e99;
+    bg-col-light: #1e1e2e99;
     border-col: #1e1e2e;
-    selected-col: #1e1e2e;
+    selected-col: #1e1e2e99;
     blue: #89b4fa;
     fg-col: #cdd6f4;
     fg-col2: #f38ba8;
@@ -23,6 +23,7 @@ window {
     border-color: @blue;
     background-color: @bg-col;
     border-radius:    10px;
+    transparency: "real";
 }
 
 mainbox {
