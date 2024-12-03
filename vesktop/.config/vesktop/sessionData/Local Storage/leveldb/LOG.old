@@ -1,0 +1,36 @@
+2024/12/03-14:15:47.361 bc9 Reusing MANIFEST /home/juha/.config/vesktop/sessionData/Local Storage/leveldb/MANIFEST-000001
+2024/12/03-14:15:47.363 bc9 Recovering log #4
+2024/12/03-14:15:47.364 bc9 Reusing old log /home/juha/.config/vesktop/sessionData/Local Storage/leveldb/000004.log 
+2024/12/03-14:16:48.296 bcb Level-0 table #8: started
+2024/12/03-14:16:48.326 bcb Level-0 table #8: 43808 bytes OK
+2024/12/03-14:16:48.330 bcb Delete type=0 #4
+2024/12/03-15:31:20.415 bcb Level-0 table #10: started
+2024/12/03-15:31:20.426 bcb Level-0 table #10: 30755 bytes OK
+2024/12/03-15:31:20.432 bcb Delete type=0 #7
+2024/12/03-16:15:07.296 bcb Level-0 table #12: started
+2024/12/03-16:15:07.307 bcb Level-0 table #12: 37840 bytes OK
+2024/12/03-16:15:07.312 bcb Delete type=0 #9
+2024/12/03-16:29:32.806 bcb Level-0 table #14: started
+2024/12/03-16:29:32.817 bcb Level-0 table #14: 15984 bytes OK
+2024/12/03-16:29:32.821 bcb Delete type=0 #11
+2024/12/03-16:37:11.158 bc9 Level-0 table #16: started
+2024/12/03-16:37:11.169 bc9 Level-0 table #16: 15163 bytes OK
+2024/12/03-16:37:11.176 bc9 Delete type=0 #13
+2024/12/03-16:37:11.176 bc9 Compacting 4@0 + 1@1 files
+2024/12/03-16:37:11.179 bc9 Generated table #17@0: 17 keys, 21166 bytes
+2024/12/03-16:37:11.180 bc9 Compacted 4@0 + 1@1 files => 21166 bytes
+2024/12/03-16:37:11.185 bc9 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/12/03-16:37:11.185 bc9 Delete type=2 #8
+2024/12/03-16:37:11.185 bc9 Delete type=2 #10
+2024/12/03-16:37:11.185 bc9 Delete type=2 #12
+2024/12/03-16:37:11.185 bc9 Delete type=2 #14
+2024/12/03-16:37:11.185 bc9 Delete type=2 #16
+2024/12/03-16:48:48.227 bcb Level-0 table #19: started
+2024/12/03-16:48:48.238 bcb Level-0 table #19: 19997 bytes OK
+2024/12/03-16:48:48.242 bcb Delete type=0 #15
+2024/12/03-16:50:23.563 bcb Level-0 table #21: started
+2024/12/03-16:50:23.573 bcb Level-0 table #21: 20181 bytes OK
+2024/12/03-16:50:23.577 bcb Delete type=0 #18
+2024/12/03-17:11:57.864 bcb Level-0 table #23: started
+2024/12/03-17:11:57.893 bcb Level-0 table #23: 31112 bytes OK
+2024/12/03-17:11:57.897 bcb Delete type=0 #20
