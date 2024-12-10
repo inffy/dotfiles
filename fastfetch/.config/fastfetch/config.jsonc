@@ -79,15 +79,15 @@
        //     "type": "localip",
        //     "format": "{ipv4} ({ifname})"
        // },
-        {
-            "key": "├───────────┤",
-            "type": "custom"
-        },
-        {
-            "key": "│ {#39} colors  {#keys}│",
-            "type": "colors",
-            "symbol": "circle"
-        },
+//        {
+//            "key": "├───────────┤",
+//            "type": "custom"
+//        },
+//        {
+//            "key": "│ {#39} colors  {#keys}│",
+//            "type": "colors",
+//            "symbol": "circle"
+//        },
         {
             "key": "╰───────────╯",
             "type": "custom"
