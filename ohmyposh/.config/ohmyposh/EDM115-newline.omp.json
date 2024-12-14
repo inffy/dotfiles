@@ -35,9 +35,9 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "\udb85\udc0b",
+          "template": "\uf303",
           "foreground": "#ff5555",
-          "powerline_symbol": "\ue0b0",
+          "powerline_symbol": "\uf303",
           "background": "#282a36",
           "type": "root",
           "style": "powerline"
