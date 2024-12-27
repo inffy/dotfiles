@@ -8,3 +8,7 @@ gtk-titlebar = false
 clipboard-read = allow
 clipboard-write = allow
 cursor-style-blink = false
+window-new-tab-position = end
+gtk-tabs-location = bottom
+gtk-adwaita = false
+gtk-wide-tabs = false
