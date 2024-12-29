@@ -61,7 +61,8 @@
         },
         {
             "key": "│ {#31} term    {#keys}│",
-            "type": "terminal"
+            "type": "terminal",
+            "format": "{pretty-name}"
         },
         {
             "key": "│ {#32} shell   {#keys}│",
