@@ -50,7 +50,7 @@
         {
             "key": "│ {#31} term    {#keys}│",
             "type": "terminal",
-            "format": "{pretty-name}"
+			"format": "{pretty-name}"
         },
         {
             "key": "│ {#32} shell   {#keys}│",
