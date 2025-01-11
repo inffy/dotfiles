@@ -5,7 +5,9 @@
         "type": "kitty",
         "source": "/home/juha/.config/fastfetch/logo/aurora.png",
 		"padding": {
-		            "top": 3
+		            "top": 3,
+		            "left": 3,
+		            "right": 3
 		        },
         "width": 18,
         "height": 8,
