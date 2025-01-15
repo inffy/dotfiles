@@ -37,7 +37,7 @@
         },
 
         {
-            "key": "│ {#34}{icon} distro  {#keys}│",
+            "key": "│ {#34}{icon} os      {#keys}│",
             "type": "os",
             "format": "{pretty-name}"
         },
