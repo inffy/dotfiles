@@ -37,3 +37,6 @@ bind -x '"\C-r": __atuin_history'
 source ~/.bash_aliases
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+### bling.sh source start
+test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
+### bling.sh source end

@@ -1,6 +1,6 @@
 [user]
 	email = 10782843+inffy@users.noreply.github.com
-	name = inffy
+	name = Juha Uotila
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
