@@ -24,9 +24,14 @@ alias gsp="git stash; git pull"
 alias gcheck="git checkout"
 alias gcredential="git config credential.helper store"
 
-#
+# -----------------------------------------------------
 # Podman
-#
+#-----------------------------------------------------
 alias build_aurora='sudo just build aurora-dx'
 alias ptag='sudo podman tag localhost/aurora-dx:latest' 
 alias switch='sudo bootc switch --transport containers-storage'
+
+# -----------------------------------------------------
+# Aurora
+# -----------------------------------------------------
+alias update='ujust update'
