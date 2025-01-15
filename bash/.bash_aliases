@@ -35,3 +35,4 @@ alias switch='sudo bootc switch --transport containers-storage'
 # Aurora
 # -----------------------------------------------------
 alias update='ujust update'
+alias upd='update'
