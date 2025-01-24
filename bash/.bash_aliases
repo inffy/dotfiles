@@ -36,3 +36,4 @@ alias switch='sudo bootc switch --transport containers-storage'
 # -----------------------------------------------------
 alias update='ujust update'
 alias upd='update'
+alias status='rpm-ostree status'
