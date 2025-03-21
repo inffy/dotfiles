@@ -11,3 +11,5 @@
 	gpgsign = false
 [tag]
 	gpgSign = false
+[gpg]
+	format = gpg
