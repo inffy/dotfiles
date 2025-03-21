@@ -8,8 +8,10 @@
 	process = git-lfs filter-process
 	required = true
 [commit]
-	gpgsign = false
+  gpgsign = true 
 [tag]
-	gpgSign = false
+	gpgSign = true
+
 [gpg]
-	format = gpg
+	program = /usr/bin/gpg
+	format = openpgp
