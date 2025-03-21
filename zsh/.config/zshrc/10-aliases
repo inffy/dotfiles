@@ -40,7 +40,7 @@ alias gcredential="git config credential.helper store"
 #-----------------------------------------------------
 alias build_aurora='sudo just build aurora'
 alias build_auroradx='sudo just build aurora-dx'
-alias ptag='sudo podman tag localhost/aurora-dx:latest' 
+alias ptag='sudo podman tag' 
 alias switch='sudo bootc switch --transport containers-storage'
 
 # -----------------------------------------------------
