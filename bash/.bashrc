@@ -40,3 +40,5 @@ source ~/.bash_aliases
 ### bling.sh source start
 test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
 ### bling.sh source end
+
+export GPG_TTY=$(tty)

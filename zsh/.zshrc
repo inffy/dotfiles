@@ -41,3 +41,5 @@ if [ -f ~/.zshrc_custom ] ;then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export GPG_TTY=$(tty)
