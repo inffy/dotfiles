@@ -49,7 +49,7 @@
  		{
 			"key": "│ {#32}󰔠 forged  {#keys}│",
       		"type": "command",
-      		"text": "date -d$(ls -alct / --time-style=full-iso|tail -1|awk '{print $6}') +'Forged on %b %d %G'",
+      		"text": "date -d$(ls -alct /var/log --time-style=full-iso|tail -1|awk '{print $6}') +'Forged on %b %d %G'",
       		"shell": "/bin/bash"
     	},
 
