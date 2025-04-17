@@ -42,6 +42,14 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# disable atuin binds
+export ATUIN_NOBIND="true"
+### bling.sh source start
+test -f /usr/share/ublue-os/bluefin-cli/bling.sh && source /usr/share/ublue-os/bluefin-cli/bling.sh
+### bling.sh source end
+# re-enable atuin ctrl+r
+#bind -x '"\C-r": __atuin_history'
+
 export GPG_TTY=$(tty)
 ### bling.sh source start
 test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh

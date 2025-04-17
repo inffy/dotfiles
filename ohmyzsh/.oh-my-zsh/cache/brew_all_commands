@@ -1,0 +1,4 @@
+list=( ${(Q)"${(z)$(<<\EO:list
+'command-not-found-init' 'which-formula' 'which-update'
+EO:list
+)}"} )
