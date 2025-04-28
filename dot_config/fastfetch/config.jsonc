@@ -83,7 +83,7 @@
         {
             "key": "│ {#34}󰉉 disk    {#keys}│",
             "type": "disk",
-            "folders": "/"
+            "folders": "/sysroot"
         },
         {
             "key": "│ {#35} ram     {#keys}│",
