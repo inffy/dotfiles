@@ -45,6 +45,7 @@ alias build_aurorabeta='sudo just build aurora beta'
 alias ptag='sudo podman tag' 
 alias switch='sudo bootc switch --transport containers-storage'
 alias bswitch='sudo bootc switch --enforce-container-sigpolicy'
+
 # -----------------------------------------------------
 # Aurora
 # -----------------------------------------------------
@@ -52,3 +53,8 @@ alias update='ujust update'
 alias upd='update'
 alias status='rpm-ostree status'
 alias fpu='flatpak update'
+
+# -----------------------------------------------------
+# fwupd
+# -----------------------------------------------------
+alias fwupd='sudo fwupdmgr'
