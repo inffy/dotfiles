@@ -1,5 +1,0 @@
-name = "Just"
-grammar = "just"
-path_suffixes = ["justfile", "Justfile", "JUSTFILE", "just"]
-line_comments = ["# "]
-brackets = [{ start = "(", end = ")", close = true, newline = true }]
