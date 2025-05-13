@@ -53,8 +53,5 @@ alias update='ujust update'
 alias upd='update'
 alias status='rpm-ostree status'
 alias fpu='flatpak update'
+alias bootc='sudo bootc'
 
-# -----------------------------------------------------
-# fwupd
-# -----------------------------------------------------
-alias fwupd='sudo fwupdmgr'
