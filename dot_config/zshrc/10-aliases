@@ -49,7 +49,7 @@ alias bswitch='sudo bootc switch --enforce-container-sigpolicy'
 # -----------------------------------------------------
 # Aurora
 # -----------------------------------------------------
-alias update='ujust update'
+alias update='sudo uupd'
 alias upd='update'
 alias status='rpm-ostree status'
 alias fpu='flatpak update'
