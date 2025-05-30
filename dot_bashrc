@@ -1,6 +1,4 @@
 # .bashrc
-#this is a test
-# test number 2
 
 export EDITOR=micro
 # Source global definitions
