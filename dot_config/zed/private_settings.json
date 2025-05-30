@@ -28,7 +28,7 @@
         "edit_prediction_provider": "zed"
     },
     // The name of a font to use for rendering text in the editor
-    "buffer_font_family": "JetBrainsMono Nerd Font",
+    "buffer_font_family": "JetBrains Mono",
     // Set the buffer text's font fallbacks, this will be merged with
     // the platform's default fallbacks.
     "buffer_font_fallbacks": null,
@@ -54,7 +54,7 @@
     "buffer_line_height": "comfortable",
     // The name of a font to use for rendering text in the UI
     // You can set this to ".SystemUIFont" to use the system font
-    "ui_font_family": "JetBrainsMono Nerd Font",
+    "ui_font_family": "JetBrains Mono",
     // Set the UI's font fallbacks, this will be merged with the platform's
     // default font fallbacks.
     "ui_font_fallbacks": null,
