@@ -633,12 +633,7 @@
             "model": "claude-3-7-sonnet-latest"
         },
         // The model to use when applying edits from the assistant.
-        "editor_model": {
-            // The provider to use.
-            "provider": "zed.dev",
-            // The model to use.
-            "model": "claude-3-7-sonnet-latest"
-        },
+        
         // When enabled, the agent can run potentially destructive actions without asking for your confirmation.
         "always_allow_tool_actions": false,
         "default_profile": "write",
@@ -1346,7 +1341,7 @@
         },
         "Java": {
             "prettier": {
-                "allowed": true,
+                "allowed": true
                 "plugins": [
                     "prettier-plugin-java"
                 ]
@@ -1359,7 +1354,7 @@
                 "..."
             ],
             "prettier": {
-                "allowed": false,
+                "allowed": false
             }
         },
         "JSON": {
