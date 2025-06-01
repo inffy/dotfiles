@@ -1339,14 +1339,7 @@
                 "allowed": false
             }
         },
-        "Java": {
-            "prettier": {
-                "allowed": true
-                "plugins": [
-                    "prettier-plugin-java"
-                ]
-            }
-        },
+        
         "JavaScript": {
             "language_servers": [
                 "!typescript-language-server",
