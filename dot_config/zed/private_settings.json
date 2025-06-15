@@ -612,7 +612,7 @@
         // Default width of the notification panel.
         "default_width": 380
     },
-    "assistant": {
+    "agent": {
         // Version of this setting.
         "version": "2",
         // Whether the assistant is enabled.
@@ -982,7 +982,7 @@
         "mode": "eager",
         // Whether edit predictions are enabled in the assistant panel.
         // This setting has no effect if globally disabled.
-        "enabled_in_assistant": true
+        "enabled_in_text_threads": true
     },
     // Settings specific to journaling
     "journal": {
