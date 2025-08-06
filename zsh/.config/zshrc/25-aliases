@@ -19,6 +19,7 @@ alias ts='~/.config/ml4w/scripts/arch/snapshot.sh'
 alias wifi='nmtui'
 alias cleanup='~/.config/ml4w/scripts/arch/cleanup.sh'
 
+n() { if [ "$#" -eq 0 ]; then nvim .; else nvim "$@"; fi; }
 # -----------------------------------------------------
 # Git
 # -----------------------------------------------------
