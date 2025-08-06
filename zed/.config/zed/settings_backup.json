@@ -614,6 +614,7 @@
     },
     "agent": {
         // Version of this setting.
+        "version": "2",
         // Whether the assistant is enabled.
         "enabled": true,
         // Whether to show the assistant panel button in the status bar.
@@ -1495,6 +1496,7 @@
     // Different settings for specific language models.
     "language_models": {
         "anthropic": {
+            "version": "1",
             "api_url": "https://api.anthropic.com"
         },
         "google": {
@@ -1504,6 +1506,7 @@
             "api_url": "http://localhost:11434"
         },
         "openai": {
+            "version": "1",
             "api_url": "https://api.openai.com/v1"
         },
         "lmstudio": {
