@@ -24,7 +24,7 @@ else
 fi
 
 ### bling.sh source start
-test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
+#test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
 ### bling.sh source end
 # Bind ctrl-r but not up arrow
-eval "$(atuin init zsh --disable-up-arrow --disable-ctrl-r)"
+#eval "$(atuin init zsh --disable-up-arrow --disable-ctrl-r)"

@@ -90,29 +90,6 @@
         },
         {
           "properties": {
-            "cache_duration": "5m",
-            "command": "/bin/bash -c 'if /usr/bin/rpm-ostree status --json | /usr/bin/jq -e \".deployments[0].booted == false\" > /dev/null 2>&1; then echo \"New deployment staged\"; fi'",
-            "shell": "bash"
-          },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "template": " {{ .Output }}",
-          "foreground": "#50fa7b",
-          "background": "#282a36",
-          "type": "command",
-          "style": "diamond"
-        },
-        {
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "template": "\ue718 {{ .Full }}",
-          "foreground": "#282a36",
-          "background": "#50fa7b",
-          "type": "node",
-          "style": "diamond"
-        },
-        {
-          "properties": {
             "display_mode": "files",
             "extensions": [
               "package-lock.json"
