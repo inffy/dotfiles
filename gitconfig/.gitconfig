@@ -1,0 +1,21 @@
+[user]
+	email = 10782843+inffy@users.noreply.github.com
+	name = Juha Uotila
+	signingkey = 2AE34C5F9981A3C6
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+ 
+[commit]
+  gpgsign = true 
+ 
+[tag]
+	gpgSign = true
+[gpg]
+	program = /usr/bin/gpg
+	format = openpgp
+[init]
+	defaultBranch = main
