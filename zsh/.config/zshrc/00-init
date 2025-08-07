@@ -12,5 +12,5 @@ export PATH=$PATH:~/.local/bin/
 export PATH=$PATH:~/.local/share/omarchy/bin/
 export "MICRO_TRUECOLOR=1"
 
-#source /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-command-not-found/handler.sh
+source /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-command-not-found/handler.sh
 
