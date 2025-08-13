@@ -19,3 +19,5 @@
 	format = openpgp
 [init]
 	defaultBranch = main
+[http]
+	ipResolve = 6
