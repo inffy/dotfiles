@@ -14,6 +14,7 @@
   ],
   "modules-right": [
     "group/tray-expander",
+    "custom/tailscale",
     "bluetooth",
     "network",
     "pulseaudio",
@@ -119,6 +120,19 @@
     "format-icons": {
       "default": ["", "", ""]
     }
+  },
+  "custom/tailscale" : {
+    "exec": "~/.config/waybar/scripts/waybar-tailscale/waybar-tailscale.sh --status '#a6e22e' '#f92672'",
+    "on-click": "exec ~/.config/waybar/scripts/waybar-tailscale/waybar-tailscale.sh --toggle",
+    "exec-on-event": true,
+    "format": "VPN: {icon} ",
+    "format-icons": {
+        "connected": "on",
+        "stopped": "off"
+    },
+    "tooltip": true,
+    "return-type": "json",
+    "interval": 3
   },
   "group/tray-expander": {
     "orientation": "inherit",
