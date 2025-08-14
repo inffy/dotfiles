@@ -1,6 +1,6 @@
-theme = catppuccin-mocha
+theme = tokyonight
 font-family = CaskaydiaMono Nerd Font
-font-size = 12
+font-size = 13
 background-opacity = 0.9
 clipboard-read = allow
 clipboard-write = allow
@@ -16,3 +16,4 @@ gtk-adwaita = true
 window-padding-y = 0
 window-padding-x = 0
 adw-toolbar-style = flat
+confirm-close-surface = false
