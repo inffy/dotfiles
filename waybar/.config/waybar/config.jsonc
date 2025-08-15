@@ -110,6 +110,21 @@
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "blueberry"
   },
+  "custom/tailscale": {
+    "exec": "~/.config/waybar/scripts/tailscale.sh --status",
+    "on-click": "exec ~/.config/waybar/scripts/tailscale.sh --toggle",
+    "exec-on-event": true,
+    "format": "{icon} {text}",
+    "format-icons": {
+      "connected": "",
+      "stopped": "",
+      "connecting": "",
+      "disconnecting": ""
+    },
+    "tooltip": true,
+    "return-type": "json",
+    "interval": 5
+  },
   "pulseaudio": {
     "format": "{icon}",
     "on-click": "alacritty --class=Wiremix -e wiremix",
@@ -120,19 +135,6 @@
     "format-icons": {
       "default": ["", "", ""]
     }
-  },
-  "custom/tailscale" : {
-    "exec": "~/.config/waybar/scripts/waybar-tailscale/waybar-tailscale.sh --status '#a6e22e' '#f92672'",
-    "on-click": "exec ~/.config/waybar/scripts/waybar-tailscale/waybar-tailscale.sh --toggle",
-    "exec-on-event": true,
-    "format": "VPN: {icon} ",
-    "format-icons": {
-        "connected": "on",
-        "stopped": "off"
-    },
-    "tooltip": true,
-    "return-type": "json",
-    "interval": 3
   },
   "group/tray-expander": {
     "orientation": "inherit",
