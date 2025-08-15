@@ -7,8 +7,8 @@
       "PxH": 1920,
       "Hz": 120,
       "Scale": 2,
-      "X": 0,
-      "Y": 0,
+      "X": 1696,
+      "Y": 1536,
       "Active": true,
       "EDIDName": "BOE NE135A1M-NY1",
       "Modes": [
@@ -79,17 +79,17 @@
         }
       ],
       "Dragging": false,
-      "DragOffX": 1640,
-      "DragOffY": 1613
+      "DragOffX": 1320,
+      "DragOffY": 456
     },
     {
-      "Name": "DP-6",
+      "Name": "DP-5",
       "PxW": 3440,
       "PxH": 1440,
       "Hz": 143.923,
       "Scale": 1,
-      "X": 384,
-      "Y": -32,
+      "X": 1440,
+      "Y": 0,
       "Active": false,
       "EDIDName": "Acer Technologies XV340CK P THQEE0013E00",
       "Modes": [
@@ -315,10 +315,10 @@
         }
       ],
       "Dragging": false,
-      "DragOffX": 2873,
-      "DragOffY": 1069
+      "DragOffX": 923,
+      "DragOffY": 782
     }
   ],
-  "created_at": "2025-08-14T19:35:29.259886597+03:00",
-  "updated_at": "2025-08-14T19:35:29.259886778+03:00"
+  "created_at": "2025-08-15T08:13:57.321300754+03:00",
+  "updated_at": "2025-08-15T08:13:57.321300915+03:00"
 }

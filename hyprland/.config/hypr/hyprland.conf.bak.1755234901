@@ -20,5 +20,5 @@ source = ~/.config/hypr/autostart.conf
 source = ~/.config/hypr/looknfeel.conf
 
 # Monitors
-monitor=eDP-1,2880x1920@120.00,1696x1536,2.00
+monitor=eDP-1,disable
 monitor=DP-5,3440x1440@143.92,1440x0,1.00
