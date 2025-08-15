@@ -39,3 +39,4 @@ source ~/.bash_aliases
 # test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
 ### bling.sh source endi
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"
