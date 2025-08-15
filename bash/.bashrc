@@ -1,6 +1,6 @@
 # .bashrc
 
-export EDITOR=micro
+#export EDITOR=micro
 export "MICRO_TRUECOLOR=1"
 # Source global definitions
 if [ -f /etc/bashrc ]; then
