@@ -6,8 +6,8 @@
         "source": "/home/juha/.config/fastfetch/logo/arch.png",
     "padding": {
       "top": 2,
-      "right": 6,
-      "left": 6
+      "right": 3,
+      "left": 3
     },
     "width": 15,
     "height": 8,
@@ -42,7 +42,7 @@
         },
         {
           "type": "command",
-          "key": "│ {#34}Ø DE {#keys}     {#keys}│",
+          "key": "│ {#34}Ø wm {#keys}     {#keys}│",
           "keyColor": "blue",
           "text": "version=$(git -C ~/.local/share/omarchy describe --tags --abbrev=0 2>/dev/null); echo \"Omarchy $version\""
         },
