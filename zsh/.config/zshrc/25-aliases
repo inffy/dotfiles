@@ -16,11 +16,9 @@ alias shutdown='systemctl poweroff'
 alias v='$EDITOR'
 alias vi='$EDITOR'
 alias vim='$EDITOR'
-alias ts='~/.config/ml4w/scripts/arch/snapshot.sh'
-alias wifi='nmtui'
-alias cleanup='~/.config/ml4w/scripts/arch/cleanup.sh'
-
+alias cd='z'
 n() { if [ "$#" -eq 0 ]; then nvim .; else nvim "$@"; fi; }
+
 # -----------------------------------------------------
 # Git
 # -----------------------------------------------------
@@ -34,6 +32,7 @@ alias gsp="git stash; git pull"
 alias gcheck="git checkout"
 alias gcredential="git config credential.helper store"
 alias lg="lazygit"
+
 # -----------------------------------------------------
 # Podman
 #-----------------------------------------------------
