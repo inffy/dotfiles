@@ -1,6 +1,6 @@
 # .bashrc
 
-#export EDITOR=micro
+export EDITOR=nvim
 export "MICRO_TRUECOLOR=1"
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -29,7 +29,7 @@ unset rc
 # Bind ctrl-r but not up arrow
 # eval "$(atuin init bash --disable-up-arrow)"
 
-#eval "$(fzf --bash)"
+# eval "$(fzf --bash)"
 
 source ~/.bash_aliases
 
