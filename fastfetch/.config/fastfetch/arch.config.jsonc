@@ -6,8 +6,8 @@
         "source": "/home/juha/.config/fastfetch/logo/arch.png",
     "padding": {
       "top": 3,
-      "right": 3,
-      "left": 4
+      "right": 2,
+      "left": 2
     },
     "width": 15,
     "height": 8,
@@ -101,6 +101,9 @@
         {
             "key": "╰───────────╯",
             "type": "custom"
+        },
+        {
+            "type": "break"
         }
     ]
 }
