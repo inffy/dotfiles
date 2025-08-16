@@ -5,9 +5,9 @@
         "type": "kitty",
         "source": "/home/juha/.config/fastfetch/logo/arch.png",
     "padding": {
-      "top": 2,
+      "top": 3,
       "right": 3,
-      "left": 3
+      "left": 4
     },
     "width": 15,
     "height": 8,
@@ -16,6 +16,12 @@
         "separator": " "
     },
     "modules": [
+        {
+            "type": "break" // <-- ADD THIS LINE
+        },
+        {
+            "type": "break" // <-- ADD THIS LINE
+        },
         {
             "key": "╭───────────╮",
             "type": "custom"
