@@ -17,10 +17,10 @@
     },
     "modules": [
         {
-            "type": "break" // <-- ADD THIS LINE
+            "type": "break"
         },
         {
-            "type": "break" // <-- ADD THIS LINE
+            "type": "break"
         },
         {
             "key": "╭───────────╮",
