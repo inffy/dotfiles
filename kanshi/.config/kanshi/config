@@ -1,7 +1,5 @@
 profile docked {
     output "Acer Technologies XV340CK P THQEE0013E00" {
-        scale 1
-        position 0,0
       }
     output eDP-1 disable
   }
