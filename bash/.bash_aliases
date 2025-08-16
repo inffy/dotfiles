@@ -5,22 +5,19 @@
 # -----------------------------------------------------
 # General
 # -----------------------------------------------------
-alias just='ujust'
 alias c='clear'
 alias nf='fastfetch'
 alias pf='fastfetch'
 alias ff='fastfetch'
-alias ls='eza -a --icons'
-alias ll='eza -al --icons'
-alias lt='eza -a --tree --level=1 --icons'
+alias ls='eza -a --icons=always'
+alias ll='eza -al --icons=always'
+alias lt='eza -a --tree --level=1 --icons=always'
 alias shutdown='systemctl poweroff'
 alias v='$EDITOR'
+alias vi='$EDITOR'
 alias vim='$EDITOR'
-alias ts='~/.config/ml4w/scripts/snapshot.sh'
-alias wifi='nmtui'
-alias cleanup='~/.config/ml4w/scripts/cleanup.sh'
-alias vim='nvim'
-alias lg='lazygit'
+alias cd='z'
+n() { if [ "$#" -eq 0 ]; then nvim .; else nvim "$@"; fi; }
 
 # -----------------------------------------------------
 # Git
@@ -34,6 +31,7 @@ alias gst="git stash"
 alias gsp="git stash; git pull"
 alias gcheck="git checkout"
 alias gcredential="git config credential.helper store"
+alias lg="lazygit"
 
 # -----------------------------------------------------
 # Podman
