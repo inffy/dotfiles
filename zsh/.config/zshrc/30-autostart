@@ -8,3 +8,7 @@
 #if [[ $(tty) == *"pts"* ]]; then
 #    fastfetch --config examples/13
 #fi
+
+# zoxide AUTOSTART
+eval "$(zoxide init zsh)"
+

@@ -11,6 +11,5 @@ export PATH=$PATH:~/.cargo/bin/
 export PATH=$PATH:~/.local/bin/
 export PATH=$PATH:~/.local/share/omarchy/bin/
 export "MICRO_TRUECOLOR=1"
-eval "$(zoxide init zsh)"
 #source /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-command-not-found/handler.sh
 
