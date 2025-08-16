@@ -18,7 +18,7 @@ plugins=(
     archlinux
     zsh-autosuggestions
     zsh-syntax-highlighting
-    fast-syntax-highlighting
+    F-Sy-H
     copyfile
     copybuffer
     dirhistory
