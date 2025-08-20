@@ -1,7 +1,7 @@
 theme = tokyonight
 font-family = CaskaydiaMono Nerd Font
 font-size = 13
-background-opacity = 0.9
+background-opacity = 0.95
 clipboard-read = allow
 clipboard-write = allow
 cursor-style-blink = false
