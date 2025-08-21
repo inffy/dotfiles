@@ -5,7 +5,7 @@
         "type": "kitty",
         "source": "/home/juha/.config/fastfetch/logo/aurora.png",
 		"padding": {
-		            "top": 3,
+		            "top": 5,
 		            "left": 3,
 		            "right": 3
 		        },
@@ -17,6 +17,12 @@
         "separator": " "
     },
     "modules": [
+        {
+            "type": "break"
+        },
+        {
+            "type": "break"
+        },
         {
             "key": "╭───────────╮",
             "type": "custom"
@@ -69,6 +75,10 @@
         {
             "key": "│ {#32} shell   {#keys}│",
             "type": "shell"
+        },
+        {
+            "key": "│ {#33} pc      {#keys}│" ,
+            "type": "host"
         },
         {
             "key": "│ {#33}󰍛 cpu     {#keys}│",
