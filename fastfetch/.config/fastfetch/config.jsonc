@@ -3,15 +3,14 @@
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
         "type": "kitty",
-        "source": "/home/juha/.config/fastfetch/logo/aurora.png",
-		"padding": {
-		            "top": 5,
-		            "left": 3,
-		            "right": 3
-		        },
-        "width": 18,
-        "height": 8,
-
+        "source": "/home/juha/.config/fastfetch/logo/arch.png",
+    "padding": {
+      "top": 3,
+      "right": 2,
+      "left": 2
+    },
+    "width": 15,
+    "height": 8,
     },
     "display": {
         "separator": " "
@@ -43,42 +42,28 @@
         },
 
         {
-            "key": "│ {#34}{icon} os      {#keys}│",
+            "key": "│ {#34}{icon} distro  {#keys}│",
             "type": "os",
             "format": "{pretty-name}"
         },
-         {
-      		"type": "command",
-      		"key": "│ 󱋩 image   │",
-      		"text": "/usr/libexec/ublue-image-info.sh"
+        {
+          "type": "command",
+          "key": "│ {#34}Ø wm {#keys}     {#keys}│",
+          "keyColor": "blue",
+          "text": "version=$(git -C ~/.local/share/omarchy describe --tags --abbrev=0 2>/dev/null); echo \"Omarchy $version\""
         },
- 		{
-			"key": "│ {#32}󰔠 forged  {#keys}│",
-      		"type": "command",
-      		"text": "date -d$(ls -alct /var/log --time-style=full-iso|tail -1|awk '{print $6}') +'Forged on %b %d %G'",
-      		"shell": "/bin/bash"
-    	},
-
         {
             "key": "│ {#35} kernel  {#keys}│",
             "type": "kernel"
         },
         {
-            "key": "│ {#32}󰇄 de      {#keys}│",
-            "type": "de"
-        },
-        {
             "key": "│ {#31} term    {#keys}│",
             "type": "terminal",
-            "format": "{pretty-name}"
+			"format": "{pretty-name}"
         },
         {
             "key": "│ {#32} shell   {#keys}│",
             "type": "shell"
-        },
-        {
-            "key": "│ {#33} pc      {#keys}│" ,
-            "type": "host"
         },
         {
             "key": "│ {#33}󰍛 cpu     {#keys}│",
@@ -93,7 +78,7 @@
         {
             "key": "│ {#34}󰉉 disk    {#keys}│",
             "type": "disk",
-            "folders": "/sysroot"
+            "folders": "/"
         },
         {
             "key": "│ {#35} ram     {#keys}│",
@@ -104,18 +89,21 @@
        //     "type": "localip",
        //     "format": "{ipv4} ({ifname})"
        // },
-//        {
-//            "key": "├───────────┤",
-//            "type": "custom"
-//        },
-//        {
-//            "key": "│ {#39} colors  {#keys}│",
-//            "type": "colors",
-//            "symbol": "circle"
-//        },
+       // {
+       //     "key": "├───────────┤",
+       //     "type": "custom"
+       // },
+       // {
+       //     "key": "│ {#39} colors  {#keys}│",
+       //     "type": "colors",
+       //     "symbol": "circle"
+       // },
         {
             "key": "╰───────────╯",
             "type": "custom"
+        },
+        {
+            "type": "break"
         }
     ]
 }
