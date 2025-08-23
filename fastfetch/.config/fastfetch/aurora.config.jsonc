@@ -77,7 +77,7 @@
             "type": "shell"
         },
         {
-            "key": "│ {#33} pc      {#keys}│" ,
+            "key": "│ {#33} host      {#keys}│" ,
             "type": "host"
         },
         {

@@ -629,7 +629,7 @@
             // The provider to use.
             "provider": "zed.dev",
             // The model to use.
-            "model": "claude-3-7-sonnet-latest"
+            "model": "claude-sonnet-4"
         },
         // The model to use when applying edits from the assistant.
         
