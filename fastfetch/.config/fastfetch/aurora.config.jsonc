@@ -52,13 +52,12 @@
       		"key": "│ 󱋩 image   │",
       		"text": "/usr/libexec/ublue-image-info.sh"
         },
- 		{
-			"key": "│ {#32}󰔠 forged  {#keys}│",
+ 		    {
+			    "key": "│ {#32}󰔠 forged  {#keys}│",
       		"type": "command",
       		"text": "date -d$(ls -alct /var/log --time-style=full-iso|tail -1|awk '{print $6}') +'Forged on %b %d %G'",
       		"shell": "/bin/bash"
-    	},
-
+    	  },
         {
             "key": "│ {#35} kernel  {#keys}│",
             "type": "kernel"
@@ -116,6 +115,9 @@
         {
             "key": "╰───────────╯",
             "type": "custom"
+        },
+        {
+            "type": "break"
         }
-    ]
+  ]
 }
