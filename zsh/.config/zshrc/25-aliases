@@ -18,7 +18,7 @@ alias vi='$EDITOR'
 alias vim='$EDITOR'
 alias cd='z'
 n() { if [ "$#" -eq 0 ]; then nvim .; else nvim "$@"; fi; }
-
+alias yay='paru'
 # -----------------------------------------------------
 # Git
 # -----------------------------------------------------
