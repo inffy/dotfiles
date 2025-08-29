@@ -89,9 +89,10 @@
     "on-click": "alacritty -e btop"
   },
   "clock": {
-    "format": "{:%I:%M %p}",
-    "format-alt": "{:%A %d/%m/%Y}",
-    "on-click-right": "~/.local/share/omarchy/bin/omarchy-cmd-tzupdate"
+    "format": "{:%A %d %B %H:%M}",
+    "format-alt": "{:%d %B W%V %Y}",
+    "tooltip": false,
+    "on-click-right": "omarchy-cmd-tzupdate"
   },
   "battery": {
     "format": "{capacity}% {icon}",
