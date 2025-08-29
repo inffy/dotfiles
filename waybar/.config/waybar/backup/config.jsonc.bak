@@ -6,48 +6,21 @@
   "height": 26,
   "modules-left": [
     "custom/omarchy",
-    "hyprland/workspaces",
-    "hyprland/window"
+    "hyprland/workspaces"
   ],
   "modules-center": [
     "clock",
     "custom/update"
   ],
   "modules-right": [
-    "mpris",
     "group/tray-expander",
-    "backlight",
-    "network",
+    "custom/tailscale",
     "bluetooth",
+    "network",
     "pulseaudio",
     "cpu",
     "battery"
-    // "clock",
-    // "custom/update"
   ],
-  "backlight": {
-  "device": "intel_backlight",
-  "format": "{percent}% {icon}",
-  "format-icons": ["", ""],
-  "on-scroll-up": "brightnessctl set +5%",
-  "on-scroll-down": "brightnessctl set 5%-",
-  "interval": 2
-},
-
-  "network": {
-    "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
-    "format" : "{icon} {essid}",
-    "format-wifi" : "{icon} {essid}",
-    "format-ethernet" : "󰀂 ↓{bandwidthDownBytes} ↑{bandwidthUpBytes}",
-    "format-disconnected" : "󰖪",
-    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-disconnected": "Disconnected",
-    "interval": 3,
-    "nospacing": 1,
-    "on-click": "alacritty --class=Impala -e impala"
-  },
-
   "hyprland/workspaces": {
     "on-click": "activate",
     "format": "{icon}",
@@ -73,31 +46,46 @@
     }
   },
   "custom/omarchy": {
-    "format": "<span font='omarchy'>\ue900</span>",
-    "on-click": "~/.local/share/omarchy/bin/omarchy-menu",
-    "tooltip-format": "SUPER + ALT + SPACE"
+    "format": "",
+    "on-click": "omarchy-menu",
+    "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
   },
   "custom/update": {
     "format": "",
-    "exec": "~/.local/share/omarchy/bin/omarchy-update-available",
+    "exec": "omarchy-update-available",
     "on-click": "alacritty --class Omarchy --title Omarchy -e omarchy-update",
+    "tooltip-format": "Omarchy update available",
     "interval": 3600
   },
   "cpu": {
     "interval": 5,
     "format": "󰍛",
-    "on-click": "alacritty -e btop"
+    "on-click": "kitty -e btop"
   },
   "clock": {
-    "format": "{:%I:%M %p}",
-    "format-alt": "{:%A %d/%m/%Y}",
-    "on-click-right": "~/.local/share/omarchy/bin/omarchy-cmd-tzupdate"
+    "format": "{:%A %d %B %H:%M}",
+    "format-alt": "{:%d %B W%V %Y}",
+    "tooltip": false,
+    "on-click-right": "omarchy-cmd-tzupdate"
+  },
+  "network": {
+    "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+    "format" : "{icon}",
+    "format-wifi" : "{icon}",
+    "format-ethernet" : "󰀂",
+    "format-disconnected" : "󰖪",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "nospacing": 1,
+    "on-click": "alacritty --class=Impala -e impala"
   },
   "battery": {
     "format": "{capacity}% {icon}",
-    "format-discharging": "{icon}",
-    "format-charging":    "{icon}",
-    "format-plugged":     "",
+    "format-discharging": "{capacity}% {icon}",
+    "format-charging":    "{capacity}% {icon}",
+    "format-plugged":     "{capacity}% ",
     "format-icons": {
       "charging": [
         "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"
@@ -106,7 +94,7 @@
         "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
       ]
     },
-    "format-full": "󰂅",
+    "format-full": "{capacity}% 󰂅",
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
     "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
     "interval": 5,
@@ -121,6 +109,21 @@
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "blueberry"
+  },
+  "custom/tailscale": {
+    "exec": "~/.config/waybar/scripts/tailscale.sh --status",
+    "on-click": "exec ~/.config/waybar/scripts/tailscale.sh --toggle",
+    "exec-on-event": true,
+    "format": "{icon} {text}",
+    "format-icons": {
+      "connected": "",
+      "stopped": "",
+      "connecting": "",
+      "disconnecting": ""
+    },
+    "tooltip": true,
+    "return-type": "json",
+    "interval": 5
   },
   "pulseaudio": {
     "format": "{icon}",
@@ -141,7 +144,7 @@
     },
     "modules": [
       "custom/expand-icon",
-      "tray"
+    "tray"
     ]
   },
   "custom/expand-icon": {
@@ -149,22 +152,7 @@
     "tooltip": false
   },
   "tray": {
-    "icon-size": 12,
+    "icon-size": 14,
     "spacing": 12
-  },
-  "mpris": {
-    "format": "{player_icon} {artist} - {title}",
-    "format-paused": "{status_icon} <i>{artist} - {title}</i>",
-    "player-icons": {
-      "default": "🎵",
-      "mpv": "🎵"
-    },
-    "status-icons": {
-      "paused": "⏸"
-    },
-    "max-length": 50
-  },
-  "hyprland/window": {
-    "format": "{}"
   }
 }
