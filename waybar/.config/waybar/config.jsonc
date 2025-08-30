@@ -15,7 +15,8 @@
   ],
   "modules-right": [
     "mpris",
-    "group/tray-expander",
+    "tray",
+//    "group/tray-expander",
     "backlight",
     "custom/tailscale",
     "network",
@@ -150,7 +151,7 @@
       "default": ["", "", ""]
     }
   },
-  "group/tray-expander": {
+ /** "group/tray-expander": {
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 600,
@@ -164,7 +165,7 @@
   "custom/expand-icon": {
     "format": " ",
     "tooltip": false
-  },
+  },**/
   "tray": {
     "icon-size": 12,
     "spacing": 12

@@ -65,7 +65,7 @@ window#waybar {
 }
 #custom-omarchy {
   padding-left: 10px;
-  color: #9ECE6A;
+  color: #7cfc00;
 }
 #custom-tailscale {
   padding-right: 10px;
