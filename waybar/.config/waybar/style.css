@@ -42,6 +42,7 @@ window#waybar {
 #cpu,
 #battery,
 #network,
+#custom-tailscale,
 #bluetooth,
 #pulseaudio,
 #clock,
@@ -61,11 +62,29 @@ window#waybar {
 #custom-omarchy {
   padding-left: 10px;
 }
-
+#custom-tailscale {
+  padding-right: 10px;
+}
 #custom-expand-icon {
   margin-right: -4px;
 }
 
 tooltip {
   padding: 2px;
+}
+
+.connecting {
+  animation: pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }

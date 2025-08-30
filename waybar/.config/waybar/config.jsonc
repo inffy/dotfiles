@@ -17,6 +17,7 @@
     "mpris",
     "group/tray-expander",
     "backlight",
+    "custom/tailscale",
     "network",
     "bluetooth",
     "pulseaudio",
@@ -122,6 +123,21 @@
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "blueberry"
+  },
+  "custom/tailscale": {
+    "exec": "~/.config/waybar/scripts/tailscale.sh --status",
+    "on-click": "exec ~/.config/waybar/scripts/tailscale.sh --toggle",
+    "exec-on-event": true,
+    "format": "{icon} {text}",
+    "format-icons": {
+      "connected": "",
+      "stopped": "",
+      "connecting": "",
+      "disconnecting": ""
+    },
+    "tooltip": true,
+    "return-type": "json",
+    "interval": 5
   },
   "pulseaudio": {
     "format": "{icon}",
