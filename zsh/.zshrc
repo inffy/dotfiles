@@ -28,3 +28,8 @@ fi
 ### bling.sh source end
 # Bind ctrl-r but not up arrow
 #eval "$(atuin init zsh --disable-up-arrow --disable-ctrl-r)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/juha/.lmstudio/bin"
+# End of LM Studio CLI section
+
