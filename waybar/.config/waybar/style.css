@@ -15,7 +15,11 @@ window#waybar {
   background: transparent;
   margin-top: 10px;
 }
-
+window#waybar.empty #window {
+  background: transparent;
+  padding: 0;
+  margin-left: 0;
+}
 .modules-left {
   margin-left: 8px;
 }
@@ -59,7 +63,11 @@ window#waybar {
   padding: 0 10px;
   margin: 5px 2;
 }
-
+mpris#waybar.empty #mpris {
+  background: transparent;
+  padding: 0;
+  margin-right: 0;
+}
 #pulseaudio {
   padding-right: 15px;
 }
