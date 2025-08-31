@@ -634,7 +634,7 @@
         // The model to use when applying edits from the assistant.
         
         // When enabled, the agent can run potentially destructive actions without asking for your confirmation.
-        "always_allow_tool_actions": false,
+        "always_allow_tool_actions": true,
         "default_profile": "write",
         "profiles": {
             "ask": {
