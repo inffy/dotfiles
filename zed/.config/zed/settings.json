@@ -627,9 +627,9 @@
         // The default model to use when creating new chats.
         "default_model": {
             // The provider to use.
-            "provider": "zed.dev",
+            "provider": "copilot_chat",
             // The model to use.
-            "model": "claude-sonnet-4"
+            "model": "gpt-4.1"
         },
         // The model to use when applying edits from the assistant.
         
