@@ -11,13 +11,19 @@
  
 [commit]
   gpgsign = true 
- 
+
+[pull]
+        rebase = true
+
 [tag]
 	gpgSign = true
+
 [gpg]
 	program = /usr/bin/gpg
 	format = openpgp
+
 [init]
 	defaultBranch = main
+
 [http]
 	ipResolve = 6
