@@ -17,5 +17,10 @@
                 }
             ]
         }
+    },
+    {
+        "bindings": {
+            "cmd-alt-g": ["agent::NewExternalAgentThread", { "agent": "gemini" }]
+        }
     }
 ]

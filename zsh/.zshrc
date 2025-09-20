@@ -33,3 +33,15 @@ fi
 export PATH="$PATH:/home/juha/.lmstudio/bin"
 # End of LM Studio CLI section
 
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/var/home/juha/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
+# bun completions
+[ -s "/var/home/juha/.bun/_bun" ] && source "/var/home/juha/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

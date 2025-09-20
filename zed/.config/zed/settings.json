@@ -25,7 +25,7 @@
     // Features that can be globally enabled or disabled
     "features": {
         // Which edit prediction provider to use.
-        "edit_prediction_provider": "zed"
+        "edit_prediction_provider": "copilot"
     },
     // The name of a font to use for rendering text in the editor
     "buffer_font_family": "JetBrains Mono",
@@ -629,7 +629,7 @@
             // The provider to use.
             "provider": "copilot_chat",
             // The model to use.
-            "model": "gpt-4.1"
+            "model": "claude-sonnet-4"
         },
         // The model to use when applying edits from the assistant.
         
