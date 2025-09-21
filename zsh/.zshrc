@@ -5,10 +5,6 @@
 # (_)___|___/_| |_|_|  \___|
 #
 # -----------------------------------------------------
-# ML4W zshrc loader
-# -----------------------------------------------------
-
-# DON'T CHANGE THIS FILE
 
 # You can define your custom configuration by adding
 # files in ~/.config/zshrc
@@ -28,6 +24,7 @@ fi
 ### bling.sh source end
 # Bind ctrl-r but not up arrow
 #eval "$(atuin init zsh --disable-up-arrow --disable-ctrl-r)"
+
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/juha/.lmstudio/bin"
