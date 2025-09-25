@@ -22,6 +22,19 @@
     // 5. "SublimeText"
     // 6. "TextMate"
     "base_keymap": "VSCode",
+
+    // --- LM Studio Configuration ---
+        "experimental.ai": {
+          "provider": "openai",
+          "models": {
+            "default": {
+              "api_base": "http://localhost:1234/v1",
+              "api_key": "lm-studio",
+              "model": "local-model"
+            }
+          }
+        },
+
     // Features that can be globally enabled or disabled
     "features": {
         // Which edit prediction provider to use.
@@ -627,12 +640,12 @@
         // The default model to use when creating new chats.
         "default_model": {
             // The provider to use.
-            "provider": "copilot_chat",
+            "provider": "lmstudio",
             // The model to use.
-            "model": "claude-sonnet-4"
+            "model": "openai/gpt-oss-20b"
         },
         // The model to use when applying edits from the assistant.
-        
+
         // When enabled, the agent can run potentially destructive actions without asking for your confirmation.
         "always_allow_tool_actions": true,
         "default_profile": "write",
@@ -1338,7 +1351,7 @@
                 "allowed": false
             }
         },
-        
+
         "JavaScript": {
             "language_servers": [
                 "!typescript-language-server",
