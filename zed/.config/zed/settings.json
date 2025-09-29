@@ -642,7 +642,7 @@
             // The provider to use.
             "provider": "lmstudio",
             // The model to use.
-            "model": "qwen/qwen3-coder-30b"
+            "model": "openai/gpt-oss-120b"
         },
         // The model to use when applying edits from the assistant.
 
