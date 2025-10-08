@@ -1,0 +1,19 @@
+{
+  "lastSelectedProfileForWorkspace": {
+    "file:///home/juha/dev/aurora:::personal": "local"
+  },
+  "lastSelectedOrgIdForWorkspace": {
+    "file:///home/juha/dev/aurora": "personal"
+  },
+  "selectedModelsByProfileId": {
+    "local": {
+      "chat": "gpt-oss-120b",
+      "edit": "qwen3-coder 30b",
+      "apply": "qwen3-coder 30b",
+      "embed": "Transformers.js (Built-In)",
+      "autocomplete": null,
+      "rerank": null,
+      "summarize": null
+    }
+  }
+}
