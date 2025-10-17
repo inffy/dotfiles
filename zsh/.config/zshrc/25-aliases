@@ -48,3 +48,5 @@ alias update='sudo bootc update'
 alias upd='update'
 alias status='rpm-ostree status'
 alias fpu='flatpak update'
+alias bump-brew='brew bump --casks --tap ublue/homebrew-tap --open-pr'
+
