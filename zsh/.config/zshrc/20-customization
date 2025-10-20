@@ -52,5 +52,6 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/theme.json)"
 # Dont bind atuin up-arrow
 export ATUIN_INIT_FLAGS="--disable-up-arrow"
 
+export GTK_IM_MODULE=simple
 # init zoxide
 eval "$(zoxide init zsh)"

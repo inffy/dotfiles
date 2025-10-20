@@ -30,7 +30,7 @@ fi
 export PATH="$PATH:/home/juha/.lmstudio/bin"
 # End of LM Studio CLI section
 
-
+export GTK_IM_MODULE=simple
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/var/home/juha/.lmstudio/bin"
 # End of LM Studio CLI section
@@ -42,3 +42,6 @@ export PATH="$PATH:/var/home/juha/.lmstudio/bin"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Initialize Homebrew/Linuxbrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
