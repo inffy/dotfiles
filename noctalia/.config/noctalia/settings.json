@@ -55,12 +55,13 @@
                     "textIntervalMs": 3000
                 },
                 {
-                    "autoHide": true,
                     "colorizeIcons": false,
+                    "hideMode": "hidden",
                     "id": "ActiveWindow",
+                    "maxWidth": 145,
                     "scrollingMode": "hover",
                     "showIcon": false,
-                    "width": 145
+                    "useFixedWidth": false
                 }
             ],
             "right": [
@@ -129,7 +130,7 @@
         "matugenSchemeType": "scheme-fruit-salad",
         "predefinedScheme": "Catppuccin",
         "schedulingMode": "off",
-        "useWallpaperColors": true
+        "useWallpaperColors": false
     },
     "controlCenter": {
         "cards": [
@@ -267,7 +268,7 @@
         "videoCodec": "h264",
         "videoSource": "portal"
     },
-    "settingsVersion": 15,
+    "settingsVersion": 16,
     "setupCompleted": true,
     "templates": {
         "discord": false,
@@ -280,7 +281,7 @@
         "enableUserTemplates": false,
         "foot": true,
         "fuzzel": true,
-        "ghostty": true,
+        "ghostty": false,
         "gtk": true,
         "kcolorscheme": true,
         "kitty": false,
