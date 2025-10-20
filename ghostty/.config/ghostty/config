@@ -12,7 +12,6 @@ copy-on-select = true
 gtk-titlebar = true
 bold-is-bright = true
 window-decoration = true
-#gtk-adwaita = true
 window-padding-y = 0
 window-padding-x = 0
 adw-toolbar-style = flat

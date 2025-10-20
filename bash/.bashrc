@@ -32,9 +32,9 @@ eval "$(atuin init bash --disable-up-arrow)"
 test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
 ### bling.sh source end
 
-#enable zoxide
-eval "$(zoxide init bash)"
-
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/var/home/juha/.lmstudio/bin"
 # End of LM Studio CLI section
+
+#enable zoxide
+eval "$(zoxide init bash)"
