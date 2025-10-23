@@ -52,7 +52,8 @@
                     "middleClickExec": "",
                     "rightClickExec": "",
                     "textCommand": "",
-                    "textIntervalMs": 3000
+                    "textIntervalMs": 3000,
+                    "textStream": false
                 },
                 {
                     "colorizeIcons": false,
@@ -72,7 +73,8 @@
                     "middleClickExec": "",
                     "rightClickExec": "xdg-open https://yalter.github.io/niri/index.html",
                     "textCommand": "",
-                    "textIntervalMs": 3000
+                    "textIntervalMs": 3000,
+                    "textStream": false
                 },
                 {
                     "id": "ScreenRecorder"
@@ -89,9 +91,11 @@
                     "showUnreadBadge": true
                 },
                 {
+                    "displayMode": "onhover",
                     "id": "WiFi"
                 },
                 {
+                    "displayMode": "onhover",
                     "id": "Bluetooth"
                 },
                 {
@@ -220,6 +224,7 @@
     },
     "location": {
         "name": "Helsinki",
+        "showCalendarEvents": true,
         "showWeekNumberInCalendar": true,
         "use12hourFormat": false,
         "useFahrenheit": false,
@@ -238,24 +243,23 @@
         "nightTemp": "4000"
     },
     "notifications": {
-        "alwaysOnTop": false,
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1760968988000,
         "location": "top_right",
         "lowUrgencyDuration": 3,
         "monitors": [
         ],
         "normalUrgencyDuration": 8,
+        "overlayLayer": true,
         "respectExpireTimeout": false
     },
     "osd": {
-        "alwaysOnTop": false,
         "autoHideMs": 2000,
         "enabled": true,
         "location": "top_right",
         "monitors": [
-        ]
+        ],
+        "overlayLayer": true
     },
     "screenRecorder": {
         "audioCodec": "opus",
@@ -286,13 +290,15 @@
         "kcolorscheme": true,
         "kitty": false,
         "pywalfox": false,
-        "qt": true
+        "qt": true,
+        "vicinae": false
     },
     "ui": {
         "fontDefault": "Adwaita Sans",
         "fontDefaultScale": 1,
         "fontFixed": "Adwaita Mono",
         "fontFixedScale": 1,
+        "panelsOverlayLayer": true,
         "tooltipsEnabled": true
     },
     "wallpaper": {
