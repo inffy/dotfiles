@@ -41,6 +41,7 @@
             ],
             "left": [
                 {
+                    "characterCount": 2,
                     "hideUnoccupied": false,
                     "id": "Workspace",
                     "labelMode": "index"
@@ -51,6 +52,7 @@
                     "leftClickExec": "qs -p \"/usr/share/zirconium/noctalia-shell\" ipc call launcher toggle",
                     "middleClickExec": "",
                     "rightClickExec": "",
+                    "textCollapse": "",
                     "textCommand": "",
                     "textIntervalMs": 3000,
                     "textStream": false
@@ -72,6 +74,7 @@
                     "leftClickExec": "niri msg action show-hotkey-overlay",
                     "middleClickExec": "",
                     "rightClickExec": "xdg-open https://yalter.github.io/niri/index.html",
+                    "textCollapse": "",
                     "textCommand": "",
                     "textIntervalMs": 3000,
                     "textStream": false

@@ -36,6 +36,8 @@ test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/b
 export PATH="$PATH:/var/home/juha/.lmstudio/bin"
 # End of LM Studio CLI section
 
+export EDITOR=nvim
+export SUDO_EDITOR=nvim
 export GPG_TTY=$(tty)
 export GTK_IM_MODULE=simple
 #enable zoxide
