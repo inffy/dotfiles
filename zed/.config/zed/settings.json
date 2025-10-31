@@ -28,7 +28,7 @@
           "provider": "openai",
           "models": {
             "default": {
-              "api_base": "http://localhost:1234/v1",
+              "api_base": "http://10.0.0.51:1234/v1",
               "api_key": "lm-studio",
               "model": "local-model"
             }
