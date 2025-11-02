@@ -1,11 +1,13 @@
 {
   "lastSelectedProfileForWorkspace": {
     "file:///home/juha/dev/aurora:::personal": "local",
-    "file:///home/juha/dev/homebrew-tap:::personal": "local"
+    "file:///home/juha/dev/homebrew-tap:::personal": "local",
+    "file:///var/home/juha/dev/aurora:::personal": "local"
   },
   "lastSelectedOrgIdForWorkspace": {
     "file:///home/juha/dev/aurora": "personal",
-    "file:///home/juha/dev/homebrew-tap": "personal"
+    "file:///home/juha/dev/homebrew-tap": "personal",
+    "file:///var/home/juha/dev/aurora": "personal"
   },
   "selectedModelsByProfileId": {
     "local": {

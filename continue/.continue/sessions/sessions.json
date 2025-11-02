@@ -4,5 +4,17 @@
     "title": "packages.json check the installed packages list and see if there are fonts that are not actually ...",
     "dateCreated": "1759930822305",
     "workspaceDirectory": "file:///home/juha/dev/aurora"
+  },
+  {
+    "sessionId": "3fceae6d-ae4e-4502-9c3b-233b1411ad20",
+    "title": "check this file and give feedback",
+    "dateCreated": "1761930122277",
+    "workspaceDirectory": "file:///var/home/juha/dev/aurora"
+  },
+  {
+    "sessionId": "42086d77-0d4d-4e4a-b542-93459333c441",
+    "title": "generate-release.yml I would like to change this so that it doesn't require the schedule be part ...",
+    "dateCreated": "1761980934953",
+    "workspaceDirectory": "file:///var/home/juha/dev/aurora"
   }
 ]
