@@ -213,7 +213,9 @@ layout {
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
- 
+spawn-at-startup "flatpak" "run" "com.vivaldi.Vivaldi"
+spawn-at-startup "flatpak" "run" "dev.vencord.Vesktop"
+spawn-at-startup "flatpak" "run" "org.gnome.Fractal"
 // This line starts waybar, a commonly used bar for Wayland compositors.
  
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -317,7 +319,7 @@ binds {
     Shift+Mod+T hotkey-overlay-title="Open a Terminal (without service)" { spawn "foot"; }
     Ctrl+Shift+Escape hotkey-overlay-title="Open a Resource Usage Analyzer: Mission Center" { spawn "flatpak" "run" "io.missioncenter.MissionCenter"; }
     Mod+E hotkey-overlay-title="Open File Manager" { spawn "nautilus"; }
- 
+    Mod+Alt+L hotkey-overlay-title="Lock the Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).
