@@ -302,16 +302,19 @@ window-rule {
     clip-to-geometry true
 }
 
+// Vivaldi rule
 window-rule {
     match at-startup=true app-id=r#"^com\.vivaldi\.Vivaldi$"#
     open-on-workspace "default"
 }
+// Vesktop rule
 window-rule {
-    match at-startup=true app-id="dev.vencord.Vesktop"
+    match at-startup=true app-id=r#"^dev\.vencord\.Vesktop$"#
     open-on-workspace "chat"
 }
+//Fractal rule
 window-rule {
-    match at-startup=true app-id="org.gnome.Fractal"
+    match at-startup=true app-id=r#"^org\.gnome\.Fractal$"#
     open-on-workspace "chat"
 }
 
