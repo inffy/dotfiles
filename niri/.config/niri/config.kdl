@@ -332,6 +332,11 @@ window-rule {
     match at-startup=true app-id=r#"^dev\.vencord\.Vesktop$"#
     open-on-workspace "chat"
 }
+// Make fractal open at 66%
+window-rule {
+  match app-id=r#"^org\.gnome\.Fractal$"#
+  default-column-width { proportion 0.66; }
+}
 //Fractal rule to always open in chat workspace
 window-rule {
     match at-startup=true app-id=r#"^org\.gnome\.Fractal$"#
