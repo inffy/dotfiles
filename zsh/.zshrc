@@ -30,6 +30,7 @@ fi
 export PATH="$PATH:/home/juha/.lmstudio/bin"
 # End of LM Studio CLI section
 
+export SUDO_EDITOR='nvim'
 export GTK_IM_MODULE=simple
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/var/home/juha/.lmstudio/bin"

@@ -42,3 +42,9 @@ export GPG_TTY=$(tty)
 export GTK_IM_MODULE=simple
 #enable zoxide
 eval "$(zoxide init bash)"
+
+# Launch Homebrew Zsh
+if [ -x /home/linuxbrew/.linuxbrew/bin/zsh ]; then
+  export SHELL=/home/linuxbrew/.linuxbrew/bin/zsh
+  exec /home/linuxbrew/.linuxbrew/bin/zsh -l
+fi
