@@ -636,9 +636,9 @@
         // The default model to use when creating new chats.
         "default_model": {
             // The provider to use.
-            "provider": "copilot_chat",
+            "provider": "lmstudio",
             // The model to use.
-            "model": "claude-sonnet-4.5"
+            "model": "openai/gpt-oss-120b"
         },
         // The model to use when applying edits from the assistant.
 
