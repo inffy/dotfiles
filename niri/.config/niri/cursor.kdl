@@ -1,0 +1,14 @@
+//
+// Cursor config
+//
+
+cursor {
+    // off
+
+    // You can change the cursor size in logical pixels.
+   xcursor-size 22
+
+
+    // You can change the cursor theme.
+    // theme "Breeze_Snow"
+}
