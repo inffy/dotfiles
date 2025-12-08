@@ -6,7 +6,6 @@ include "dms.kdl"
 
 // INCLUDE OTHER CONFIGS
 include "animations.kdl"
-include "autostart.kdl"
 include "cursor.kdl"
 include "input.kdl"
 include "keybindings.kdl"
@@ -15,3 +14,4 @@ include "monitors.kdl"
 include "settings.kdl"
 include "windowrules.kdl"
 include "workspaces.kdl"
+include "autostart.kdl"
