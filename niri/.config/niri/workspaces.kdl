@@ -1,3 +1,4 @@
 // Named workspaces
 workspace "default"
 workspace "chat"
+workspace "tools"
