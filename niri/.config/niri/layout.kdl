@@ -3,7 +3,7 @@
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 10
+    gaps 8
 
     border {
         // Opinionated default from Zirconium
