@@ -227,7 +227,6 @@ layout {
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
-spawn-at-startup "flatpak" "run" "com.vivaldi.Vivaldi"
 spawn-at-startup "flatpak" "run" "dev.vencord.Vesktop"
 spawn-at-startup "flatpak" "run" "org.gnome.Fractal"
 // This line starts waybar, a commonly used bar for Wayland compositors.
@@ -319,12 +318,12 @@ window-rule {
 
 // set Vivaldi always open proportion 70%
 window-rule {
-    match app-id=r#"^Vivaldi-flatpak$"#
+    match app-id=r#"^app\zen_browser\.zen$"#
     default-column-width { proportion 0.7; }
 }
 // Vivaldi rule to always open in default workspace
 window-rule {
-    match at-startup=true app-id=r#"^Vivaldi-flatpak$"#
+    match at-startup=true app-id=r#"^app\zen_browser\.zen$"#
     open-on-workspace "default"
 }
 // Vesktop rule to always open in chat workspace
