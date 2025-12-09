@@ -28,7 +28,7 @@ binds {
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
     // Launch Browser
-    Mod+B hotkey-overlay-title="Open Web Browser" { spawn "flatpak" "run" "com.vivaldi.Vivaldi"; }
+    Mod+B hotkey-overlay-title="Open Web Browser" { spawn "flatpak" "run" "app.zen_browser.zen"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
