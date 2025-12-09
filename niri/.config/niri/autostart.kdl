@@ -2,6 +2,7 @@
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
+spawn-at-startup "flatpak" "run" "app.zen_browser.zen"
 spawn-at-startup "flatpak" "run" "dev.vencord.Vesktop"
 spawn-at-startup "flatpak" "run" "org.gnome.Fractal"
 // This line starts waybar, a commonly used bar for Wayland compositors.
