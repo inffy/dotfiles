@@ -15,5 +15,3 @@ include "monitors.kdl"
 include "settings.kdl"
 include "windowrules.kdl"
 include "autostart.kdl"
-
-include "dms/outputs.kdl"
