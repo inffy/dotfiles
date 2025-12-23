@@ -76,6 +76,7 @@ window-rule {
 window-rule {
     match at-startup=true app-id=r#"^foot$"#
     open-on-workspace "default"
+	default-column-width { proportion 1.0; }
 }
 
 // Open Zed at Tools workspace

@@ -5,7 +5,7 @@
 spawn-at-startup "flatpak" "run" "app.zen_browser.zen"
 spawn-at-startup "flatpak" "run" "dev.vencord.Vesktop"
 spawn-at-startup "flatpak" "run" "org.gnome.Fractal"
-spawn-at-startup "footclient"
+spawn-at-startup "sh" "-c" "sleep 3 && footclient"
 // This line starts waybar, a commonly used bar for Wayland compositors.
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
