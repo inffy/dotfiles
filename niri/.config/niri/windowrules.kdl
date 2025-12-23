@@ -72,6 +72,12 @@ window-rule {
     open-on-workspace "chat"
 }
 
+// Open Foot on default at startup
+window-rule {
+    match at-startup=true app-id=r#"^foot$"#
+    open-on-workspace "default"
+}
+
 // Open Zed at Tools workspace
 window-rule {
     match app-id=r#"^dev\.zed\.Zed$"#
