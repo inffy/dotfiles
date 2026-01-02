@@ -46,7 +46,7 @@ alias switch='sudo bootc switch --transport containers-storage'
 # -----------------------------------------------------
 alias update='sudo bootc update'
 alias upd='update'
-alias status='sudo bootc status'
+alias status='rpm-ostree status'
 alias fpu='flatpak update'
 alias bump-brew='brew bump --casks --tap ublue/homebrew-tap --open-pr'
 
