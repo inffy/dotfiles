@@ -27,7 +27,7 @@ fi
 unset rc
 
 # Bind ctrl-r but not up arrow
-eval "$(atuin init bash --disable-up-arrow)"
+#eval "$(atuin init bash --disable-up-arrow)"
 ### bling.sh source start
 test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
 ### bling.sh source end
