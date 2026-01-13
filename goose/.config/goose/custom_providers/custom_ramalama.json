@@ -1,0 +1,21 @@
+{
+  "name": "custom_ramalama",
+  "engine": "openai",
+  "display_name": "ramalama",
+  "description": "Custom ramalama provider",
+  "api_key_env": "CUSTOM_RAMALAMA_API_KEY",
+  "base_url": "http://0.0.0.0:8080",
+  "models": [
+    {
+      "name": "unsloth/gpt-oss-120b",
+      "context_limit": 128000,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": null
+    }
+  ],
+  "headers": null,
+  "timeout_seconds": null,
+  "supports_streaming": true
+}
