@@ -48,3 +48,8 @@ alias update='sudo bootc update'
 alias upd='update'
 alias status='rpm-ostree status'
 alias fpu='flatpak update'
+
+# -----------------------------------------------------
+# AI
+# ----------------------------------------------------
+alias rlsloth='ramalama serve --image quay.io/ramalama/ramalama hf://unsloth/gpt-oss-120b-GGUF -c 131072'
