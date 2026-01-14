@@ -35,7 +35,7 @@ alias lg="lazygit"
 
 # -----------------------------------------------------
 # Podman
-#-----------------------------------------------------
+# -----------------------------------------------------
 alias build_aurora='sudo just build aurora'
 alias build_auroradx='sudo just build aurora-dx'
 alias ptag='sudo podman tag localhost/aurora-dx:latest'
@@ -50,3 +50,7 @@ alias status='rpm-ostree status'
 alias fpu='flatpak update'
 alias bump-brew='brew bump --casks --tap ublue/homebrew-tap --open-pr'
 
+# -----------------------------------------------------
+# AI
+# -----------------------------------------------------
+alias rlsloth='ramalama serve --image quay.io/ramalama/ramalama hf://unsloth/gpt-oss-120b-GGUF -c 131072'
