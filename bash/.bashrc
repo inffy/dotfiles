@@ -36,6 +36,7 @@ test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/b
 export PATH="$PATH:/var/home/juha/.lmstudio/bin"
 # End of LM Studio CLI section
 
+alias rlsloth='ramalama serve --image quay.io/ramalama/ramalama hf://unsloth/gpt-oss-120b-GGUF -c 131072'
 export EDITOR=nvim
 export SUDO_EDITOR=nvim
 export GPG_TTY=$(tty)
