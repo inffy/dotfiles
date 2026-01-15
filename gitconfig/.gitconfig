@@ -9,21 +9,10 @@
 	process = git-lfs filter-process
 	required = true
  
-[commit]
-  gpgsign = true 
-
-[pull]
-        rebase = true
-
-[tag]
-	gpgSign = true
-
-[gpg]
-	program = /usr/bin/gpg
-	format = ssh
-
 [init]
 	defaultBranch = main
 
 [http]
 	ipResolve = 6
+[gpg]
+	format = ssh
