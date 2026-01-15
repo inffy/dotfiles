@@ -1503,6 +1503,25 @@
     },
     // Different settings for specific language models.
     "language_models": {
+        "openai_compatible": {
+            "Ramalama (Local)": {
+                "api_url": "http://10.0.0.51:8080",
+                "available_models": [
+                    {
+                        "name": "unsloth/gpt-oss-120b",
+                        "max_tokens": 200000,
+                        "max_output_tokens": 32000,
+                        "max_completion_tokens": 200000,
+                        "capabilities": {
+                            "tools": true,
+                            "images": false,
+                            "parallel_tool_calls": false,
+                            "prompt_cache_key": false
+                        }
+                    }
+                ]
+            }
+        },
         "anthropic": {
             "api_url": "https://api.anthropic.com"
         },
