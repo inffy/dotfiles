@@ -1,7 +1,7 @@
 [user]
 	email = 10782843+inffy@users.noreply.github.com
 	name = Juha Uotila
-	signingkey = /home/juha/.ssh/id_ed25519.pub
+	signingkey = ~/.ssh/id_ed25519.pub
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -16,3 +16,5 @@
 	ipResolve = 6
 [gpg]
 	format = ssh
+[commit]
+	gpgsign = true
