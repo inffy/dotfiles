@@ -1,129 +1,130 @@
 // Inspired by Catnap
 {
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-    "logo": {
-        "type": "kitty",
-        "source": "/home/juha/.config/fastfetch/logo/aurora-new.png",
-		"padding": {
-		            "top": 5,
-		            "left": 3,
-		            "right": 3
-		        },
-        "width": 18,
-        "height": 8,
-
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "kitty",
+    "source": "/home/juha/.config/fastfetch/logo/aurora-new.png",
+    "padding": {
+      "top": 5,
+      "left": 3,
+      "right": 3
     },
-    "display": {
-        "separator": " "
+    "width": 18,
+    "height": 8,
+  },
+  "general": {
+    "dsForceDrm": true
+  },
+  "display": {
+    "separator": " "
+  },
+  "modules": [
+    {
+      "type": "break"
     },
-    "modules": [
-        {
-            "type": "break"
-        },
-        {
-            "type": "break"
-        },
-        {
-            "key": "╭──────────────╮",
-            "type": "custom"
-        },
-        {
-            "key": "│ {#31} user    {#keys}   │",
-            "type": "title",
-            "format": "{user-name}"
-        },
-        {
-            "key": "│ {#32}󰇅 hname   {#keys}   │",
-            "type": "title",
-            "format": "{host-name}"
-        },
-        {
-            "key": "│ {#33}󰅐 uptime  {#keys}   │",
-            "type": "uptime"
-        },
-
-        {
-            "key": "│ {#34}{icon} os      {#keys}   │",
-            "type": "os",
-            "format": "{pretty-name}"
-        },
-         {
-      		"type": "command",
-      		"key": "│ 󱋩 image      │",
-      		"text": "/usr/libexec/ublue-image-info.sh"
-        },
- 		{
-		    "key": "│ {#32}󰔠 forged  {#keys}   │",
-      		"type": "command",
-      		"text": "date -d$(ls -alct /var/log --time-style=full-iso|tail -1|awk '{print $6}') +'Forged on %b %d %G'",
-      		"shell": "/bin/bash"
-    	},
-        {
-            "key": "│ {#33} Stargazers {#keys}│",
-            "type": "command",
-            "text": "echo $(cat /usr/share/ublue-os/fastfetch-user-count)",
-            "shell": "/bin/bash"
-        },
-        {
-            "key": "│ {#35} kernel  {#keys}   │",
-            "type": "kernel"
-        },
-        {
-            "key": "│ {#32}󰇄 de      {#keys}   │",
-            "type": "de"
-        },
-        {
-            "key": "│ {#31} term    {#keys}   │",
-            "type": "terminal",
-            "format": "{pretty-name}"
-        },
-        {
-            "key": "│ {#32} shell   {#keys}   │",
-            "type": "shell"
-        },
-        {
-            "key": "│ {#33} host    {#keys}   │" ,
-            "type": "host"
-        },
-        {
-            "key": "│ {#33}󰍛 cpu     {#keys}   │",
-            "type": "cpu",
-            "showPeCoreCount": true
-        },
-       // {
-       //     "key": "│ {#33}󰍛 gpu     {#keys}│",
-       //     "type": "gpu",
-        //  "keyColor": "green"
-       //         },
-        {
-            "key": "│ {#34}󰉉 disk    {#keys}   │",
-            "type": "disk",
-            "folders": "/sysroot"
-        },
-        {
-            "key": "│ {#35} ram     {#keys}   │",
-            "type": "memory"
-        },
-       // {
-       //     "key": "│ {#36}󰩟 network {#keys}│",
-       //     "type": "localip",
-       //     "format": "{ipv4} ({ifname})"
-       // },
-//        {
-//            "key": "├───────────┤",
-//            "type": "custom"
-//        },
-//        {
-//            "key": "│ {#39} colors  {#keys}│",
-//            "type": "colors",
-//            "symbol": "circle"
-//        },
-        {
-            "key": "╰──────────────╯",
-            "type": "custom"
-        },
-        {
-            "type": "break"
-        }
+    {
+      "type": "break"
+    },
+    {
+      "key": "╭──────────────╮",
+      "type": "custom"
+    },
+    {
+      "key": "│ {#31} user    {#keys}   │",
+      "type": "title",
+      "format": "{user-name}"
+    },
+    {
+      "key": "│ {#32}󰇅 hname   {#keys}   │",
+      "type": "title",
+      "format": "{host-name}"
+    },
+    {
+      "key": "│ {#33}󰅐 uptime  {#keys}   │",
+      "type": "uptime"
+    },
+    {
+      "key": "│ {#34}{icon} os      {#keys}   │",
+      "type": "os",
+      "format": "{pretty-name}"
+    },
+    {
+      "type": "command",
+      "key": "│ 󱋩 image      │",
+      "text": "/usr/libexec/ublue-image-info.sh"
+    },
+    {
+      "key": "│ {#32}󰔠 forged  {#keys}   │",
+      "type": "command",
+      "text": "date -d$(ls -alct /var/log --time-style=full-iso|tail -1|awk '{print $6}') +'Forged on %b %d %G'",
+      "shell": "/bin/bash"
+    },
+    {
+      "key": "│ {#33} Stargazers {#keys}│",
+      "type": "command",
+      "text": "echo $(cat /usr/share/ublue-os/fastfetch-user-count)",
+      "shell": "/bin/bash"
+    },
+    {
+      "key": "│ {#35} kernel  {#keys}   │",
+      "type": "kernel"
+    },
+    {
+      "key": "│ {#32}󰇄 de      {#keys}   │",
+      "type": "de"
+    },
+    {
+      "key": "│ {#31} term    {#keys}   │",
+      "type": "terminal",
+      "format": "{pretty-name}"
+    },
+    {
+      "key": "│ {#32} shell   {#keys}   │",
+      "type": "shell"
+    },
+    {
+      "key": "│ {#33} host    {#keys}   │",
+      "type": "host"
+    },
+    {
+      "key": "│ {#33}󰍛 cpu     {#keys}   │",
+      "type": "cpu",
+      "showPeCoreCount": true
+    },
+    // {
+    //     "key": "│ {#33}󰍛 gpu     {#keys}│",
+    //     "type": "gpu",
+    //  "keyColor": "green"
+    //         },
+    {
+      "key": "│ {#34}󰉉 disk    {#keys}   │",
+      "type": "disk",
+      "folders": "/sysroot"
+    },
+    {
+      "key": "│ {#35} ram     {#keys}   │",
+      "type": "memory"
+    },
+    // {
+    //     "key": "│ {#36}󰩟 network {#keys}│",
+    //     "type": "localip",
+    //     "format": "{ipv4} ({ifname})"
+    // },
+    //        {
+    //            "key": "├───────────┤",
+    //            "type": "custom"
+    //        },
+    //        {
+    //            "key": "│ {#39} colors  {#keys}│",
+    //            "type": "colors",
+    //            "symbol": "circle"
+    //        },
+    {
+      "key": "╰──────────────╯",
+      "type": "custom"
+    },
+    {
+      "type": "break"
+    }
   ]
 }
