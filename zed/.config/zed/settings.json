@@ -640,9 +640,9 @@
         // The default model to use when creating new chats.
         "default_model": {
             // The provider to use.
-            "provider": "Ramalama (Local)",
+            "provider": "copilot_chat",
             // The model to use.
-            "model": "unsloth/gpt-oss-120b"
+            "model": "claude-sonnet-4.5"
         },
         // The model to use when applying edits from the assistant.
 
