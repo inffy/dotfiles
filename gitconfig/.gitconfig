@@ -27,3 +27,5 @@
 [core]
 	excludesFile = /home/juha/.config/git/ignore
 
+[safe]
+	directory = /usr/share/kde-builder
