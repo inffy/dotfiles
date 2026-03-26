@@ -36,10 +36,6 @@
         },
 
     // Features that can be globally enabled or disabled
-    "features": {
-        // Which edit prediction provider to use.
-        "edit_prediction_provider": "copilot"
-    },
     // The name of a font to use for rendering text in the editor
     "buffer_font_family": "JetBrainsMono Nerd Font Mono",
     // Set the buffer text's font fallbacks, this will be merged with
@@ -628,6 +624,9 @@
     "agent": {
         // Version of this setting.
         // Whether the assistant is enabled.
+        "tool_permissions": {
+            "default": "allow"
+        },
         "enabled": true,
         // Whether to show the assistant panel button in the status bar.
         "button": true,
@@ -640,14 +639,15 @@
         // The default model to use when creating new chats.
         "default_model": {
             // The provider to use.
+            "effort": "high",
+            "enable_thinking": true,
             "provider": "copilot_chat",
             // The model to use.
-            "model": "claude-sonnet-4.5"
+            "model": "claude-sonnet-4.6"
         },
         // The model to use when applying edits from the assistant.
 
         // When enabled, the agent can run potentially destructive actions without asking for your confirmation.
-        "always_allow_tool_actions": true,
         "default_profile": "write",
         "profiles": {
             "ask": {
@@ -976,6 +976,7 @@
         // Any addition to this list will be merged with the default list.
         // Globs are matched relative to the worktree root,
         // except when starting with a slash (/) or equivalent in Windows.
+        "provider": "copilot",
         "disabled_globs": [
             "**/.env*",
             "**/*.pem",
@@ -1338,7 +1339,7 @@
                 "allowed": true
             }
         },
-        "HEEX": {
+        "HEEx": {
             "language_servers": [
                 "elixir-ls",
                 "!next-ls",

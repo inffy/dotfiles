@@ -19,8 +19,9 @@
         }
     },
     {
+        "context": "Workspace",
         "bindings": {
-            "cmd-alt-g": ["agent::NewExternalAgentThread", { "agent": "gemini" }]
+            "ctrl-alt-g": "agent::NewThread"
         }
     }
 ]

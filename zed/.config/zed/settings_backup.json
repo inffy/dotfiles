@@ -6,7 +6,11 @@
     // - "light": Use the theme indicated by the "light" field
     // - "dark": Use the theme indicated by the "dark" field
     "theme": "Catppuccin Mocha",
-    "icon_theme": "Catppuccin Mocha",
+    "icon_theme": {
+        "mode": "dark",
+        "light": "Catppuccin Mocha",
+        "dark": "Catppuccin Mocha"
+    },
     // The name of a base set of key bindings to use.
     // This setting can take six values, each named after another
     // text editor:
@@ -636,9 +640,11 @@
         // The default model to use when creating new chats.
         "default_model": {
             // The provider to use.
+            "effort": "high",
+            "enable_thinking": true,
             "provider": "copilot_chat",
             // The model to use.
-            "model": "claude-sonnet-4"
+            "model": "claude-sonnet-4.6"
         },
         // The model to use when applying edits from the assistant.
 
@@ -795,7 +801,7 @@
         // Whether to open tabs in preview mode when selected from the file finder.
         "enable_preview_from_file_finder": false,
         // Whether a preview tab gets replaced when code navigation is used to navigate away from the tab.
-        "enable_preview_from_code_navigation": false
+        "enable_keep_preview_on_code_navigation": false
     },
     // Settings related to the file finder.
     "file_finder": {
@@ -1503,6 +1509,25 @@
     },
     // Different settings for specific language models.
     "language_models": {
+        "openai_compatible": {
+            "Ramalama (Local)": {
+                "api_url": "http://10.0.0.51:8080",
+                "available_models": [
+                    {
+                        "name": "unsloth/gpt-oss-120b",
+                        "max_tokens": 200000,
+                        "max_output_tokens": 32000,
+                        "max_completion_tokens": 200000,
+                        "capabilities": {
+                            "tools": true,
+                            "images": false,
+                            "parallel_tool_calls": false,
+                            "prompt_cache_key": false
+                        }
+                    }
+                ]
+            }
+        },
         "anthropic": {
             "api_url": "https://api.anthropic.com"
         },
