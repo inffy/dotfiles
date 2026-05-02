@@ -25,7 +25,8 @@
             "cache_duration": "none"
           },
           "leading_diamond": "\ue0b6",
-          "template": "{{ .UserName }}",
+          "trailing_diamond": "\ue0b0",
+          "template": "{{ .UserName }}@{{ .HostName }} ",
           "foreground": "#f8f8f2",
           "background": "#282a36",
           "type": "session",
@@ -40,17 +41,6 @@
           "powerline_symbol": "\uf303",
           "background": "#282a36",
           "type": "root",
-          "style": "powerline"
-        },
-        {
-          "options": {
-            "cache_duration": "none"
-          },
-          "template": "\ue7d9 ",
-          "foreground": "#f8f8f2",
-          "powerline_symbol": "\ue0b0",
-          "background": "#282a36",
-          "type": "os",
           "style": "powerline"
         },
         {
