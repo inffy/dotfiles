@@ -160,4 +160,4 @@ providers:
     model: unsloth/Qwen3.6-35B-A3B-GGUF:BF16
     configured: true
 LMSTUDIO_HOST: http://localhost:1234
-active_provider: local
+active_provider: lmstudio
