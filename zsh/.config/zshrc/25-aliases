@@ -54,4 +54,5 @@ alias pin='sudo ostree admin pin'
 # -----------------------------------------------------
 # AI
 # -----------------------------------------------------
-alias rlsloth='ramalama serve --image quay.io/ramalama/ramalama hf://unsloth/gpt-oss-120b-GGUF -c 131072'
+alias rlsloth='ramalama serve --image quay.io/ramalama/ramalama hf://unsloth/Qwen3.6-27B-GGUF:Q4_K_M -c 8192'
+
