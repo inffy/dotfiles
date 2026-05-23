@@ -5,6 +5,11 @@
     // - "system": Use the theme that corresponds to the system's appearance
     // - "light": Use the theme indicated by the "light" field
     // - "dark": Use the theme indicated by the "dark" field
+    "agent_servers": {
+        "github-copilot-cli": {
+            "type": "registry"
+        }
+    },
     "theme": "Catppuccin Mocha",
     "icon_theme": {
         "mode": "dark",
@@ -639,11 +644,10 @@
         // The default model to use when creating new chats.
         "default_model": {
             // The provider to use.
-            "effort": "high",
-            "enable_thinking": true,
-            "provider": "copilot_chat",
+            "enable_thinking": false,
+            "provider": "lmstudio",
             // The model to use.
-            "model": "claude-sonnet-4.6"
+            "model": "qwen/qwen3.6-35b-a3b"
         },
         // The model to use when applying edits from the assistant.
 
