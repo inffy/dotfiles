@@ -85,7 +85,7 @@ extensions:
     args: []
     envs: {}
     env_keys:
-      - LINUX_MCP_USER
+    - LINUX_MCP_USER
     timeout: 300
     bundled: null
     available_tools: []
@@ -145,13 +145,6 @@ extensions:
     display_name: Orchestrator
     bundled: true
     available_tools: []
-  linux-mcp-server:
-    name: linux-mcp-server
-    type: stdio
-    cmd: /home/linuxbrew/.linuxbrew/bin/linux-mcp-server
-    envs: {}
-    env_keys:
-      - LINUX_MCP_USER
 GOOSE_TELEMETRY_ENABLED: false
 providers:
   github_copilot:
