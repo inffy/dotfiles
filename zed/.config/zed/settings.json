@@ -633,6 +633,9 @@
     "agent": {
         // Version of this setting.
         // Whether the assistant is enabled.
+        "sandbox_permissions": {
+            "allow_unsandboxed": true
+        },
         "tool_permissions": {
             "default": "allow"
         },
@@ -648,10 +651,11 @@
         // The default model to use when creating new chats.
         "default_model": {
             // The provider to use.
-            "enable_thinking": false,
-            "provider": "lmstudio",
+            "effort": "high",
+            "enable_thinking": true,
+            "provider": "copilot_chat",
             // The model to use.
-            "model": "qwen3.6-35b-a3b"
+            "model": "gemini-3.6-flash"
         },
         // The model to use when applying edits from the assistant.
 
