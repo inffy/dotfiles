@@ -12,7 +12,7 @@
         },
         "github-copilot-cli": {
             "default_config_options": {
-                "model": "gemini-3.6-flash"
+                "model": "claude-sonnet-5"
             },
             "type": "registry"
         }
@@ -186,7 +186,7 @@
     // Default: not set, defaults to "bar"
     "cursor_shape": null,
     // Determines when the mouse cursor should be hidden in an editor or input box.
-    "hide_mouse": "on_typing_and_movement",
+    "hide_mouse": "on_typing_and_action",
     // How to highlight the current line in the editor.
     //
     // 1. Don't highlight the current line:
@@ -654,11 +654,10 @@
         // The default model to use when creating new chats.
         "default_model": {
             // The provider to use.
-            "effort": "high",
-            "enable_thinking": true,
-            "provider": "copilot_chat",
+            "enable_thinking": false,
+            "provider": "lmstudio",
             // The model to use.
-            "model": "gemini-3.6-flash"
+            "model": "qwen3.8-27b"
         },
         // The model to use when applying edits from the assistant.
 

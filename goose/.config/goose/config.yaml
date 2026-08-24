@@ -85,7 +85,7 @@ extensions:
     args: []
     envs: {}
     env_keys:
-      - LINUX_MCP_USER
+    - LINUX_MCP_USER
     timeout: 300
     bundled: null
     available_tools: []
@@ -151,7 +151,14 @@ extensions:
     cmd: /home/linuxbrew/.linuxbrew/bin/linux-mcp-server
     envs: {}
     env_keys:
-      - LINUX_MCP_USER
+    - LINUX_MCP_USER
+  scheduler:
+    enabled: true
+    type: platform
+    name: scheduler
+    description: Create and manage scheduled recipe execution
+    display_name: Scheduler
+    bundled: true
 GOOSE_TELEMETRY_ENABLED: false
 providers:
   github_copilot:
@@ -160,7 +167,7 @@ providers:
     configured: true
   lmstudio:
     enabled: true
-    model: qwen3.6-35b-a3b
+    model: qwen3.8-27b
     configured: true
   local:
     enabled: true
