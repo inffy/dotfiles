@@ -657,7 +657,7 @@
             "enable_thinking": false,
             "provider": "lmstudio",
             // The model to use.
-            "model": "qwen3.8-27b"
+            "model": "zai-org/glm-4.7-flash"
         },
         // The model to use when applying edits from the assistant.
 

@@ -167,7 +167,7 @@ providers:
     configured: true
   lmstudio:
     enabled: true
-    model: qwen3.8-27b
+    model: zai-org/glm-4.7-flash
     configured: true
   local:
     enabled: true
