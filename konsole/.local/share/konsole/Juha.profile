@@ -8,6 +8,9 @@ InheritContainerContext=true
 Name=Juha
 Parent=FALLBACK/
 
+[Interaction Options]
+UnderlineFilesEnabled=true
+
 [Scrolling]
 HighlightScrolledLines=false
 ScrollBarPosition=2

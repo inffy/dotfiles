@@ -6,5 +6,8 @@ DefaultProfile=Juha.profile
 [General]
 ConfigVersion=1
 
+[ThumbnailsSettings]
+ThumbnailAlt=true
+
 [UiSettings]
 ColorScheme=
