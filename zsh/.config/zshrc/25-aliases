@@ -44,12 +44,13 @@ alias switch='sudo bootc switch --transport containers-storage'
 # -----------------------------------------------------
 # Aurora
 # -----------------------------------------------------
-alias update='sudo bootc update'
+alias update='ujust update'
 alias upd='update'
 alias status='rpm-ostree status'
 alias fpu='flatpak update'
 alias bump-brew='brew bump --casks --tap ublue/homebrew-tap --open-pr'
 alias pin='sudo ostree admin pin'
+alias odiff='rpm-ostree db diff'
 
 # -----------------------------------------------------
 # AI
