@@ -13,7 +13,7 @@
         "github-copilot-cli": {
             "default_config_options": {
                 "reasoning_effort": "medium",
-                "model": "gemini-3.8-flash"
+                "model": "claude-sonnet-5"
             },
             "type": "registry"
         }
