@@ -1,0 +1,10 @@
+modelRoles:
+  default: anthropic/claude-opus-5-5
+symbolPreset: nerd
+composer:
+  shape: box
+theme:
+  dark: titanium
+update:
+  auto: true
+setupVersion: 3

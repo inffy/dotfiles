@@ -1,0 +1,16 @@
+{
+	"$schema": "https://raw.githubusercontent.com/can1357/oh-my-pi/main/packages/coding-agent/src/config/mcp-schema.json",
+	"mcpServers": {
+		"linux-tools": {
+			"type": "stdio",
+			"command": "/home/linuxbrew/.linuxbrew/bin/linux-mcp-server",
+			"args": [],
+			"env": {
+				"LINUX_MCP_USER": "juha",
+				"LINUX_MCP_LOG_LEVEL": "INFO",
+				"LINUX_MCP_SSH_KEY_PATH": "${HOME}/.ssh/id_ed25519"
+			},
+			"timeout": 30000
+		}
+	}
+}
