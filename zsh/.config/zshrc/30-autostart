@@ -12,3 +12,5 @@
 # zoxide AUTOSTART
 eval "$(zoxide init zsh)"
 
+# omp
+eval "$(omp completions zsh)"

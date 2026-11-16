@@ -7,6 +7,9 @@
     // - "dark": Use the theme indicated by the "dark" field
     "cli_default_open_behavior": "new_window",
     "agent_servers": {
+        "claude-acp": {
+            "type": "registry"
+        },
         "gemini": {
             "type": "registry"
         },
@@ -466,6 +469,7 @@
     },
     "project_panel": {
         // Whether to show the project panel button in the status bar
+        "folder_indicator": "icon",
         "button": true,
         // Whether to hide the gitignore entries in the project panel.
         "hide_gitignore": false,
@@ -478,7 +482,6 @@
         // Whether to show file icons in the project panel.
         "file_icons": true,
         // Whether to show folder icons or chevrons for directories in the project panel.
-        "folder_icons": true,
         // Whether to show the git status in the project panel.
         "git_status": true,
         // Amount of indentation for nested items.
@@ -531,6 +534,7 @@
     },
     "outline_panel": {
         // Whether to show the outline panel button in the status bar
+        "folder_indicator": "icon",
         "button": true,
         // Default width of the outline panel.
         "default_width": 300,
@@ -539,7 +543,6 @@
         // Whether to show file icons in the outline panel.
         "file_icons": true,
         // Whether to show folder icons or chevrons for directories in the outline panel.
-        "folder_icons": true,
         // Whether to show the git status in the outline panel.
         "git_status": true,
         // Amount of indentation for nested items.
