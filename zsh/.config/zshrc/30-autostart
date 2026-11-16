@@ -9,8 +9,6 @@
 #    fastfetch --config examples/13
 #fi
 
-# zoxide AUTOSTART
-eval "$(zoxide init zsh)"
 
 # omp
 eval "$(omp completions zsh)"
