@@ -1,0 +1,342 @@
+#!/usr/bin/env bash
+# promote-stable.sh — interactively promote upstream main into a stable branch
+#
+# Steps:
+#   1. git fetch <upstream>
+#   2. git switch -c <branch> <upstream>/<target>
+#   3. git merge <upstream>/<source>
+#   4. git push -u <origin> <branch>
+#
+# Uses gum (https://github.com/charmbracelet/gum) for the TUI when available,
+# falls back to plain prompts otherwise.
+#
+# Overridable via env vars:
+#   UPSTREAM=upstream ORIGIN=origin SOURCE=main TARGET=stable-f45 BRANCH=...
+#   e.g.  TARGET=stable-f44 ./promote-stable.sh
+
+set -euo pipefail
+
+UPSTREAM="${UPSTREAM:-upstream}"
+ORIGIN="${ORIGIN:-origin}"
+SOURCE="${SOURCE:-main}"
+TARGET="${TARGET:-stable-f45}"
+BRANCH="${BRANCH:-promote-${SOURCE}-to-${TARGET}}"
+
+HAVE_GUM=0
+command -v gum >/dev/null 2>&1 && HAVE_GUM=1
+
+# ---------------------------------------------------------------- ui helpers
+
+header() {
+    if ((HAVE_GUM)); then
+        gum style --border rounded --border-foreground 212 --padding "0 2" \
+            --margin "1 0 0 0" --bold "$1" "$2"
+    else
+        printf '\n=== %s ===\n%s\n' "$1" "$2"
+    fi
+}
+
+info() {
+    if ((HAVE_GUM)); then gum style --foreground 245 "$*"; else echo "$*"; fi
+}
+
+ok() {
+    if ((HAVE_GUM)); then gum style --foreground 42 "✔ $*"; else echo "OK: $*"; fi
+}
+
+warn() {
+    if ((HAVE_GUM)); then gum style --foreground 214 "! $*"; else echo "WARN: $*"; fi
+}
+
+err() {
+    if ((HAVE_GUM)); then gum style --foreground 196 --bold "✘ $*" >&2; else echo "ERROR: $*" >&2; fi
+}
+
+show_cmd() {
+    if ((HAVE_GUM)); then
+        gum style --foreground 81 --border normal --border-foreground 240 --padding "0 1" "\$ $*"
+    else
+        echo "  \$ $*"
+    fi
+}
+
+# choose "prompt" option1 option2 ...  -> prints chosen option
+choose() {
+    local prompt="$1"; shift
+    if ((HAVE_GUM)); then
+        gum choose --header "$prompt" "$@"
+    else
+        local i=1 opt
+        echo "$prompt" >&2
+        for opt in "$@"; do echo "  $i) $opt" >&2; ((i++)); done
+        local n
+        while true; do
+            read -rp "> " n
+            if [[ "$n" =~ ^[0-9]+$ ]] && ((n >= 1 && n <= $#)); then
+                echo "${!n}"; return
+            fi
+        done
+    fi
+}
+
+confirm() {
+    if ((HAVE_GUM)); then
+        gum confirm "$1"
+    else
+        local a; read -rp "$1 [y/N] " a; [[ "$a" =~ ^[Yy] ]]
+    fi
+}
+
+# spin "title" cmd...  (only for non-interactive commands)
+spin() {
+    local title="$1"; shift
+    if ((HAVE_GUM)); then
+        gum spin --spinner dot --show-error --title "$title" -- "$@"
+    else
+        echo "$title"; "$@"
+    fi
+}
+
+# Ask Run / Skip / Quit for a step. Returns 0 = run, 1 = skip.
+ask_step() {
+    local c
+    c=$(choose "What now?" "Run it" "Skip this step" "Quit")
+    case "$c" in
+        "Run it") return 0 ;;
+        "Skip this step") warn "Skipped."; return 1 ;;
+        *) info "Bye."; exit 0 ;;
+    esac
+}
+
+unmerged_files() { git diff --name-only --diff-filter=U; }
+
+# Merge tools git reports as actually installed on this machine.
+available_mergetools() {
+    git mergetool --tool-help 2>/dev/null |
+        awk '/may be set to one of the following/ {on=1; next}
+             /^$/ || /not currently available/ {on=0}
+             on && NF {print $1}'
+}
+
+# Let the user resolve conflicts with an installed tool or their editor,
+# instead of whatever merge.tool happens to be configured (e.g. bcompare).
+resolve_conflicts() {
+    local editor tools choice f files rc
+    # MERGE_EDITOR wins, then your shell's VISUAL/EDITOR, then git's core.editor.
+    editor="${MERGE_EDITOR:-${VISUAL:-${EDITOR:-$(git var GIT_EDITOR 2>/dev/null)}}}"
+    mapfile -t tools < <(available_mergetools)
+
+    choice=$(choose "Resolve conflicts with:" \
+        "Editor ($editor), one file at a time" \
+        "Editor — type a different command" \
+        "${tools[@]/#/mergetool: }" \
+        "Back")
+
+    case "$choice" in
+        "Editor — type"*)
+            if ((HAVE_GUM)); then
+                editor=$(gum input --placeholder "e.g. micro, nano, code --wait")
+            else
+                read -rp "Editor command: " editor
+            fi
+            ;&
+        Editor*)
+            if [[ -z "$editor" ]] || ! command -v "${editor%% *}" >/dev/null 2>&1; then
+                err "Editor '${editor}' not found in PATH. Try 'Editor — type a different command'."
+                return 0
+            fi
+            mapfile -t files < <(unmerged_files)
+            if ((${#files[@]} == 0)); then
+                info "No conflicted files left."
+                return 0
+            fi
+            for f in "${files[@]}"; do
+                info "Opening $f in ${editor} — remove the <<<<<<< ======= >>>>>>> markers, save and quit."
+                rc=0
+                # shellcheck disable=SC2086  # editor may carry args, e.g. "code --wait"
+                $editor "$f" </dev/tty >/dev/tty 2>&1 || rc=$?
+                ((rc == 0)) || warn "${editor} exited with status ${rc}."
+                if grep -qE '^(<<<<<<<|>>>>>>>)( |$)' "$f"; then
+                    warn "$f still has conflict markers — leaving it unresolved."
+                else
+                    git add -- "$f" && ok "Marked $f as resolved."
+                fi
+            done
+            ;;
+        mergetool:*)
+            git mergetool --tool="${choice#mergetool: }" || true
+            ;;
+    esac
+}
+
+# ---------------------------------------------------------------- preflight
+
+preflight() {
+    if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+        err "Not inside a git repository. cd into your aurora clone first."
+        exit 1
+    fi
+    # git reports conflicted paths relative to the repo root, so work from there.
+    cd "$(git rev-parse --show-toplevel)"
+
+    local r
+    for r in "$UPSTREAM" "$ORIGIN"; do
+        if ! git remote get-url "$r" >/dev/null 2>&1; then
+            err "Remote '$r' is not configured (git remote -v)."
+            exit 1
+        fi
+    done
+
+    if [[ -n "$(git status --porcelain --untracked-files=no)" ]]; then
+        warn "Your working tree has uncommitted changes:"
+        git status --short --untracked-files=no
+        confirm "Continue anyway? (switching branches may fail)" || exit 1
+    fi
+
+    ((HAVE_GUM)) || warn "gum not found — using plain prompts. (brew install gum for the nice UI)"
+
+    header "Promote ${UPSTREAM}/${SOURCE} → ${TARGET}" \
+        "upstream: $(git remote get-url "$UPSTREAM")
+origin:   $(git remote get-url "$ORIGIN")
+branch:   ${BRANCH}"
+    confirm "Start?" || exit 0
+}
+
+# ---------------------------------------------------------------- steps
+
+step_fetch() {
+    header "Step 1/4 · Fetch" "Refresh refs from ${UPSTREAM}"
+    show_cmd git fetch "$UPSTREAM"
+    ask_step || return 0
+    spin "Fetching ${UPSTREAM}…" git fetch "$UPSTREAM"
+    ok "Fetched ${UPSTREAM}."
+}
+
+step_branch() {
+    header "Step 2/4 · Create branch" "New branch ${BRANCH} from ${UPSTREAM}/${TARGET}"
+    show_cmd git switch -c "$BRANCH" "${UPSTREAM}/${TARGET}"
+
+    if ! git rev-parse --verify --quiet "${UPSTREAM}/${TARGET}" >/dev/null; then
+        err "${UPSTREAM}/${TARGET} does not exist. Did step 1 run?"
+        exit 1
+    fi
+
+    if git rev-parse --verify --quiet "refs/heads/${BRANCH}" >/dev/null; then
+        warn "Local branch '${BRANCH}' already exists."
+        local c
+        c=$(choose "How do you want to handle it?" \
+            "Recreate it from ${UPSTREAM}/${TARGET} (discards the old one)" \
+            "Switch to the existing branch" \
+            "Quit")
+        case "$c" in
+            Recreate*)
+                show_cmd git switch -C "$BRANCH" "${UPSTREAM}/${TARGET}"
+                git switch -C "$BRANCH" "${UPSTREAM}/${TARGET}"
+                ;;
+            Switch*)
+                show_cmd git switch "$BRANCH"
+                git switch "$BRANCH"
+                ;;
+            *) exit 0 ;;
+        esac
+    else
+        ask_step || return 0
+        git switch -c "$BRANCH" "${UPSTREAM}/${TARGET}"
+    fi
+    ok "On branch $(git branch --show-current)."
+}
+
+step_merge() {
+    local src="${UPSTREAM}/${SOURCE}"
+    header "Step 3/4 · Merge" "Merge ${src} into ${BRANCH}"
+
+    local count
+    count=$(git rev-list --count "HEAD..${src}")
+    if ((count == 0)); then
+        ok "Already up to date — ${src} has nothing that ${BRANCH} doesn't."
+        confirm "Continue to push anyway?" || exit 0
+        return 0
+    fi
+
+    info "${count} commit(s) in ${src} not yet in ${BRANCH}:"
+    if ((HAVE_GUM)) && ((count > 20)); then
+        git log --oneline --no-decorate "HEAD..${src}" | gum pager
+    else
+        git log --oneline --no-decorate "HEAD..${src}" | head -n 50
+        ((count > 50)) && info "… and $((count - 50)) more"
+    fi
+    echo
+    git diff --stat "HEAD...${src}" | tail -n 1
+
+    show_cmd git merge "$src"
+    ask_step || return 0
+
+    # Not wrapped in spin: git may open your editor for the merge message.
+    if git merge "$src"; then
+        ok "Merged cleanly."
+        return 0
+    fi
+
+    # ---- conflict loop
+    while [[ -n "$(unmerged_files)" ]] || git rev-parse -q --verify MERGE_HEAD >/dev/null; do
+        if [[ -n "$(unmerged_files)" ]]; then
+            err "Merge conflicts in:"
+            unmerged_files | sed 's/^/    /'
+            info "Resolve them in another terminal/editor and 'git add' the files."
+        else
+            ok "All conflicts resolved — ready to commit the merge."
+        fi
+
+        local c
+        c=$(choose "Merge in progress" \
+            "Check again / commit merge" \
+            "Resolve conflicts (editor or merge tool)" \
+            "Show git status" \
+            "Abort merge and quit")
+        case "$c" in
+            Check*)
+                if [[ -z "$(unmerged_files)" ]]; then
+                    git commit --no-edit && ok "Merge committed." && return 0
+                fi
+                ;;
+            Resolve*) resolve_conflicts ;;
+            Show*) git status ;;
+            Abort*)
+                git merge --abort
+                warn "Merge aborted. Branch ${BRANCH} is left at ${UPSTREAM}/${TARGET}."
+                exit 1
+                ;;
+        esac
+    done
+}
+
+step_push() {
+    header "Step 4/4 · Push" "Push ${BRANCH} to your fork (${ORIGIN})"
+    show_cmd git push -u "$ORIGIN" "$BRANCH"
+    ask_step || return 0
+    git push -u "$ORIGIN" "$BRANCH"
+    ok "Pushed ${BRANCH} to ${ORIGIN}."
+
+    # Print a compare link (no PR is opened automatically).
+    local up_url or_url up_slug or_owner
+    up_url=$(git remote get-url "$UPSTREAM")
+    or_url=$(git remote get-url "$ORIGIN")
+    up_slug=$(sed -E 's#(\.git)?/?$##; s#^.*github\.com[:/]##' <<<"$up_url")
+    or_owner=$(sed -E 's#(\.git)?/?$##; s#^.*github\.com[:/]##; s#/.*$##' <<<"$or_url")
+    if [[ "$up_url" == *github.com* && "$or_url" == *github.com* ]]; then
+        echo
+        info "Open a PR when you're ready:"
+        show_cmd "https://github.com/${up_slug}/compare/${TARGET}...${or_owner}:${BRANCH}?expand=1"
+    fi
+}
+
+# ---------------------------------------------------------------- main
+
+preflight
+step_fetch
+step_branch
+step_merge
+step_push
+
+echo
+ok "Done."
